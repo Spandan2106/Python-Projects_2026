@@ -1,6 +1,3 @@
-# Small Python Projects
-
-This repository contains a collection of simple Python scripts developed for learning and practicing Python programming concepts.
 
 ## Projects
 
@@ -17,6 +14,10 @@ A basic calculator that performs fundamental arithmetic operations.
 ### 3. Number Swapper (`swap.py`)
 A simple utility script to swap two input values.
 - **Concept**: Demonstrates Python's ability to swap variables concisely using tuple unpacking.
+
+### 4.  System Resource Monitor (`Script Project`)
+
+A Python script that monitors CPU and memory usage and sends an email alert if they exceed configurable thresholds.
 
 ## How to Run
 
