@@ -1,0 +1,6 @@
+f = input("Enter a no : ")
+print("The no is : ", f)
+print(type(f))
+p = float(f)
+print("The no is : ", p)
+print(type(p))
