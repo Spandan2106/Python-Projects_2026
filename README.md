@@ -12,9 +12,7 @@
 
 Python is consistently ranked as one of the most popular and loved programming languages in the world. Its design philosophy emphasizes code readability and a syntax that allows developers to express concepts in fewer lines of code than many other languages.
 
-<div align="center">
-  <img src="https://media.giphy.com/media/KAq5w47R9rmTuvghNs/giphy.gif" width="400"/>
-</div>
+
 
 *   **✨ Simple and Elegant:** Python's clean syntax is intuitive and easy to learn, making it a perfect choice for beginners and a productive tool for seasoned developers.
 *   **📚 Rich Library Ecosystem:** With a massive standard library and an active community contributing to the Python Package Index (PyPI), you can find a package for almost anything, from web development to machine learning.
