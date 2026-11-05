@@ -1,5 +1,4 @@
 <div align="center">
-  <img src="https://media.giphy.com/media/M9gbBdIgHTAlO/giphy.gif" width="200" height="200"/>
   <h1>Python Projects Showcase (2026)</h1>
   <p>A collection of diverse projects and scripts, exploring the vast capabilities of the Python programming language.</p>
   
