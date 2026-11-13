@@ -23,7 +23,9 @@ food = (
 )
 
 score = 0
+speed = 10
 game_over = False
+high_score = 0
 
 
 def draw_game():
@@ -106,6 +108,8 @@ while running:
 
         if head == food:
             score += 10
+            if score % 50 == 0:
+                speed += 2
             food = create_food()
         else:
             snake.pop()
@@ -115,9 +119,11 @@ while running:
             or head[1] < 0 or head[1] >= HEIGHT
             or head in snake[1:]
         ):
+            high_score = max(score, high_score)
             game_over = True
 
+
     draw_game()
-    clock.tick(10)
+    clock.tick(speed)
 
 pygame.quit()
