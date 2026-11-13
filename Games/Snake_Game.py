@@ -51,6 +51,10 @@ def draw_game():
     if game_over:
         message = font.render("GAME OVER - Press R", True, (255, 255, 0))
         screen.blit(message, (150, 180))
+    
+    if paused:
+        message = font.render("PAUSED - Press SPACE", True, (255, 255, 0))
+        screen.blit(message, (150, 180))
 
     pygame.display.update()
 
