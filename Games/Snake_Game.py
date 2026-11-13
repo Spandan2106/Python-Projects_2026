@@ -44,6 +44,8 @@ def draw_game():
 
     text = font.render(f"Score: {score}", True, (255, 255, 255))
     screen.blit(text, (10, 10))
+    high_text = font.render(f"High Score: {high_score}", True, (255, 255, 255))
+    screen.blit(high_text, (400, 10))
 
     if game_over:
         message = font.render("GAME OVER - Press R", True, (255, 255, 0))
