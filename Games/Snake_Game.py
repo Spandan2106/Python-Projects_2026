@@ -79,6 +79,9 @@ while running:
 
             if event.key == pygame.K_ESCAPE:
                 running = False
+                
+            if event.key == pygame.K_SPACE and not game_over:
+                paused = not paused
 
             if game_over and event.key == pygame.K_r:
                 snake = [(300, 200), (280, 200), (260, 200)]
@@ -99,8 +102,7 @@ while running:
 
                 elif event.key in (pygame.K_RIGHT, pygame.K_d) and direction != (-CELL, 0):
                     direction = (CELL, 0)
-            if event.key == pygame.K_SPACE and not game_over:
-                paused = not paused
+            
 
     if not game_over:
 
