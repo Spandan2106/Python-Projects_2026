@@ -25,6 +25,7 @@ food = (
 score = 0
 speed = 10
 game_over = False
+paused = False
 high_score = 0
 
 
@@ -98,6 +99,8 @@ while running:
 
                 elif event.key in (pygame.K_RIGHT, pygame.K_d) and direction != (-CELL, 0):
                     direction = (CELL, 0)
+            if event.key == pygame.K_SPACE and not game_over:
+                paused = not paused
 
     if not game_over:
 
