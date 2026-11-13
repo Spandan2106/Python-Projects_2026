@@ -90,7 +90,7 @@ while running:
                 food = create_food()
                 game_over = False
 
-            if not game_over:
+            if not game_over and not paused:
                 if event.key in (pygame.K_UP, pygame.K_w) and direction != (0, CELL):
                     direction = (0, -CELL)
 
