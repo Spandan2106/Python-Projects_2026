@@ -24,6 +24,7 @@ YELLOW = (255, 220, 50)
 PURPLE = (170, 80, 220)
 ORANGE = (255, 150, 40)
 
+# Fonts
 font = pygame.font.SysFont("Arial", 28)
 small_font = pygame.font.SysFont("Arial", 22)
 
@@ -54,7 +55,6 @@ ball = pygame.Rect(
 ball_dx = 3
 ball_dy = -4
 
-
 # Brick settings
 BRICK_WIDTH = 70
 BRICK_HEIGHT = 25
@@ -71,7 +71,6 @@ BRICK_TYPES = [
 
 bricks = []
 
-
 # Game variables
 score = 0
 high_score = 0
@@ -81,7 +80,7 @@ level = 1
 game_state = "ready"
 
 
-# Create bricks for different levels
+# Create bricks according to level
 def create_bricks():
 
     bricks.clear()
@@ -102,30 +101,34 @@ def create_bricks():
 
         for col in range(cols):
 
-            # Level 2: create a staggered arrangement
-            if level == 2 and (row + col) % 2 != 0:
-                continue
+            # Level 1: Full rectangular arrangement
+            if level == 1:
+                pass
 
-            # Level 3: create a diamond-like arrangement
-            if level == 3:
-                distance = abs(col - 4.5)
-
-                if distance > row + 1:
+            # Level 2: Staggered arrangement
+            elif level == 2:
+                if (row + col) % 2 != 0:
                     continue
 
-            x = (
-                WIDTH // 2
-                - (cols * (BRICK_WIDTH + BRICK_GAP) - BRICK_GAP) // 2
-                + col * (BRICK_WIDTH + BRICK_GAP)
-            )
+            # Level 3: Diamond-like arrangement
+            elif level == 3:
+                if abs(col - 4.5) > row + 1:
+                    continue
 
-            y = 70 + row * (BRICK_HEIGHT + BRICK_GAP)
+            total_width = cols * (BRICK_WIDTH + BRICK_GAP) - BRICK_GAP
+
+            start_x = (WIDTH - total_width) // 2
+
+            x = start_x + col * (BRICK_WIDTH + BRICK_GAP)
+            y = 80 + row * (BRICK_HEIGHT + BRICK_GAP)
 
             brick = pygame.Rect(
                 x, y, BRICK_WIDTH, BRICK_HEIGHT
             )
 
-            color, points = BRICK_TYPES[row % len(BRICK_TYPES)]
+            color, points = BRICK_TYPES[
+                row % len(BRICK_TYPES)
+            ]
 
             bricks.append({
                 "rect": brick,
@@ -134,7 +137,7 @@ def create_bricks():
             })
 
 
-# Calculate current ball speed
+# Get ball speed based on score
 def get_ball_speed():
 
     speed = BASE_SPEED + (score // 50) * 0.5
@@ -142,7 +145,7 @@ def get_ball_speed():
     return min(speed, MAX_SPEED)
 
 
-# Adjust velocity while preserving its direction
+# Update ball speed
 def update_ball_speed():
 
     global ball_dx, ball_dy
@@ -155,11 +158,11 @@ def update_ball_speed():
 
     if current_speed > 0:
 
-        ball_dx = (ball_dx / current_speed) * target_speed
-        ball_dy = (ball_dy / current_speed) * target_speed
+        ball_dx = ball_dx / current_speed * target_speed
+        ball_dy = ball_dy / current_speed * target_speed
 
 
-# Reset ball
+# Reset ball position
 def reset_ball():
 
     global ball_dx, ball_dy
@@ -188,6 +191,8 @@ def restart_game():
 
     game_state = "ready"
 
+    # high_score is intentionally not reset
+
 
 # Initialize bricks
 create_bricks()
@@ -200,7 +205,7 @@ while running:
 
     screen.fill(BLACK)
 
-    # Handle events
+    # Event handling
     for event in pygame.event.get():
 
         if event.type == pygame.QUIT:
@@ -211,7 +216,7 @@ while running:
             if event.key == pygame.K_ESCAPE:
                 running = False
 
-            # SPACE: start, pause, resume or restart
+            # SPACE controls start, pause, resume and restart
             if event.key == pygame.K_SPACE:
 
                 if game_state == "ready":
@@ -226,7 +231,7 @@ while running:
                 elif game_state in ("game_over", "won"):
                     restart_game()
 
-    # Get keyboard input
+    # Keyboard input
     keys = pygame.key.get_pressed()
 
     if game_state == "playing":
@@ -290,7 +295,7 @@ while running:
                 if score > high_score:
                     high_score = score
 
-                # Increase speed according to score
+                # Increase ball speed
                 update_ball_speed()
 
                 # Bounce ball
@@ -370,7 +375,7 @@ while running:
     screen.blit(lives_text, (WIDTH - 140, 15))
     screen.blit(level_text, (WIDTH // 2 - 50, 15))
 
-    # Display game messages
+    # Game messages
     if game_state == "ready":
 
         if level == 1 and score == 0 and lives == 3:
