@@ -1,6 +1,7 @@
 
 import pygame
 import random
+import math
 
 pygame.init()
 
@@ -20,11 +21,13 @@ BLUE = (50, 150, 255)
 RED = (255, 70, 70)
 GREEN = (50, 220, 100)
 YELLOW = (255, 220, 50)
+PURPLE = (170, 80, 220)
+ORANGE = (255, 150, 40)
 
-font = pygame.font.SysFont("Arial", 30)
+font = pygame.font.SysFont("Arial", 28)
 small_font = pygame.font.SysFont("Arial", 22)
 
-# Paddle
+# Paddle settings
 PADDLE_WIDTH = 110
 PADDLE_HEIGHT = 15
 PADDLE_SPEED = 7
@@ -36,76 +39,158 @@ paddle = pygame.Rect(
     PADDLE_HEIGHT
 )
 
-# Ball
+# Ball settings
 BALL_SIZE = 15
-BALL_SPEED_X = 4
-BALL_SPEED_Y = -4
+BASE_SPEED = 5
+MAX_SPEED = 10
 
 ball = pygame.Rect(
-    WIDTH // 2 - BALL_SIZE // 2,
+    WIDTH // 2,
     HEIGHT // 2,
     BALL_SIZE,
     BALL_SIZE
 )
 
-ball_dx = BALL_SPEED_X
-ball_dy = BALL_SPEED_Y
+ball_dx = 3
+ball_dy = -4
 
-# Bricks
-BRICK_ROWS = 5
-BRICK_COLS = 10
 
+# Brick settings
 BRICK_WIDTH = 70
 BRICK_HEIGHT = 25
 BRICK_GAP = 8
 
+# Brick colors and points
+BRICK_TYPES = [
+    (RED, 10),
+    (ORANGE, 20),
+    (YELLOW, 30),
+    (GREEN, 40),
+    (PURPLE, 50)
+]
+
 bricks = []
 
+
+# Game variables
+score = 0
+high_score = 0
+lives = 3
+level = 1
+
+game_state = "ready"
+
+
+# Create bricks for different levels
 def create_bricks():
+
     bricks.clear()
 
-    for row in range(BRICK_ROWS):
-        for col in range(BRICK_COLS):
+    if level == 1:
+        rows = 3
+        cols = 10
 
-            x = 35 + col * (BRICK_WIDTH + BRICK_GAP)
-            y = 60 + row * (BRICK_HEIGHT + BRICK_GAP)
+    elif level == 2:
+        rows = 4
+        cols = 8
+
+    else:
+        rows = 5
+        cols = 10
+
+    for row in range(rows):
+
+        for col in range(cols):
+
+            # Level 2: create a staggered arrangement
+            if level == 2 and (row + col) % 2 != 0:
+                continue
+
+            # Level 3: create a diamond-like arrangement
+            if level == 3:
+                distance = abs(col - 4.5)
+
+                if distance > row + 1:
+                    continue
+
+            x = (
+                WIDTH // 2
+                - (cols * (BRICK_WIDTH + BRICK_GAP) - BRICK_GAP) // 2
+                + col * (BRICK_WIDTH + BRICK_GAP)
+            )
+
+            y = 70 + row * (BRICK_HEIGHT + BRICK_GAP)
 
             brick = pygame.Rect(
                 x, y, BRICK_WIDTH, BRICK_HEIGHT
             )
 
-            bricks.append(brick)
+            color, points = BRICK_TYPES[row % len(BRICK_TYPES)]
+
+            bricks.append({
+                "rect": brick,
+                "color": color,
+                "points": points
+            })
 
 
-# Game variables
-score = 0
-lives = 3
-game_state = "ready"
+# Calculate current ball speed
+def get_ball_speed():
 
-create_bricks()
+    speed = BASE_SPEED + (score // 50) * 0.5
+
+    return min(speed, MAX_SPEED)
 
 
+# Adjust velocity while preserving its direction
+def update_ball_speed():
+
+    global ball_dx, ball_dy
+
+    current_speed = math.sqrt(
+        ball_dx ** 2 + ball_dy ** 2
+    )
+
+    target_speed = get_ball_speed()
+
+    if current_speed > 0:
+
+        ball_dx = (ball_dx / current_speed) * target_speed
+        ball_dy = (ball_dy / current_speed) * target_speed
+
+
+# Reset ball
 def reset_ball():
+
     global ball_dx, ball_dy
 
     ball.center = (WIDTH // 2, HEIGHT // 2)
 
-    ball_dx = random.choice([-4, 4])
-    ball_dy = -4
+    speed = get_ball_speed()
+
+    ball_dx = random.choice([-1, 1]) * speed * 0.6
+    ball_dy = -speed * 0.8
 
     paddle.centerx = WIDTH // 2
 
 
+# Restart complete game
 def restart_game():
-    global score, lives, game_state
+
+    global score, lives, level, game_state
 
     score = 0
     lives = 3
+    level = 1
 
     create_bricks()
     reset_ball()
 
     game_state = "ready"
+
+
+# Initialize bricks
+create_bricks()
 
 
 # Main game loop
@@ -115,7 +200,7 @@ while running:
 
     screen.fill(BLACK)
 
-    # Events
+    # Handle events
     for event in pygame.event.get():
 
         if event.type == pygame.QUIT:
@@ -126,74 +211,120 @@ while running:
             if event.key == pygame.K_ESCAPE:
                 running = False
 
+            # SPACE: start, pause, resume or restart
             if event.key == pygame.K_SPACE:
 
                 if game_state == "ready":
                     game_state = "playing"
 
+                elif game_state == "playing":
+                    game_state = "paused"
+
+                elif game_state == "paused":
+                    game_state = "playing"
+
                 elif game_state in ("game_over", "won"):
                     restart_game()
 
-    # Keyboard input
+    # Get keyboard input
     keys = pygame.key.get_pressed()
 
     if game_state == "playing":
 
         # Paddle movement
-        if keys[pygame.K_LEFT] and paddle.left > 0:
+        if keys[pygame.K_LEFT]:
             paddle.x -= PADDLE_SPEED
 
-        if keys[pygame.K_RIGHT] and paddle.right < WIDTH:
+        if keys[pygame.K_RIGHT]:
             paddle.x += PADDLE_SPEED
 
+        # Keep paddle inside screen
+        paddle.clamp_ip(screen.get_rect())
+
         # Ball movement
-        ball.x += ball_dx
-        ball.y += ball_dy
+        ball.x += round(ball_dx)
+        ball.y += round(ball_dy)
 
         # Wall collision
-        if ball.left <= 0 or ball.right >= WIDTH:
-            ball_dx *= -1
+        if ball.left <= 0:
+            ball.left = 0
+            ball_dx = abs(ball_dx)
+
+        if ball.right >= WIDTH:
+            ball.right = WIDTH
+            ball_dx = -abs(ball_dx)
 
         if ball.top <= 0:
-            ball_dy *= -1
+            ball.top = 0
+            ball_dy = abs(ball_dy)
 
         # Paddle collision
         if ball.colliderect(paddle) and ball_dy > 0:
-            ball.bottom = paddle.top
-            ball_dy *= -1
 
-            # Change horizontal direction based on hit position
+            ball.bottom = paddle.top
+
+            speed = get_ball_speed()
+
             offset = (
                 ball.centerx - paddle.centerx
             ) / (PADDLE_WIDTH / 2)
 
-            ball_dx = offset * 6
+            offset = max(-1, min(1, offset))
+
+            ball_dx = offset * speed * 0.9
+
+            ball_dy = -math.sqrt(
+                max(1, speed ** 2 - ball_dx ** 2)
+            )
 
         # Brick collision
         for brick in bricks[:]:
 
-            if ball.colliderect(brick):
+            if ball.colliderect(brick["rect"]):
 
                 bricks.remove(brick)
-                score += 10
 
+                score += brick["points"]
+
+                # Update high score
+                if score > high_score:
+                    high_score = score
+
+                # Increase speed according to score
+                update_ball_speed()
+
+                # Bounce ball
                 ball_dy *= -1
+
                 break
 
         # Ball falls below screen
         if ball.top > HEIGHT:
 
             lives -= 1
+
             reset_ball()
 
             if lives <= 0:
                 game_state = "game_over"
+
             else:
                 game_state = "ready"
 
-        # Win condition
+        # Level progression
         if len(bricks) == 0:
-            game_state = "won"
+
+            if level < 3:
+
+                level += 1
+
+                create_bricks()
+                reset_ball()
+
+                game_state = "ready"
+
+            else:
+                game_state = "won"
 
     # Draw paddle
     pygame.draw.rect(screen, BLUE, paddle)
@@ -203,71 +334,128 @@ while running:
 
     # Draw bricks
     for brick in bricks:
-        pygame.draw.rect(screen, RED, brick)
-        pygame.draw.rect(screen, WHITE, brick, 1)
 
-    # Display score and lives
+        pygame.draw.rect(
+            screen,
+            brick["color"],
+            brick["rect"]
+        )
+
+        pygame.draw.rect(
+            screen,
+            WHITE,
+            brick["rect"],
+            1
+        )
+
+    # Display score
     score_text = font.render(
         f"Score: {score}", True, WHITE
+    )
+
+    high_text = small_font.render(
+        f"High Score: {high_score}", True, YELLOW
     )
 
     lives_text = font.render(
         f"Lives: {lives}", True, WHITE
     )
 
-    screen.blit(score_text, (20, 15))
-    screen.blit(lives_text, (WIDTH - 130, 15))
+    level_text = font.render(
+        f"Level: {level}", True, GREEN
+    )
 
-    # Game states
+    screen.blit(score_text, (20, 15))
+    screen.blit(high_text, (20, 48))
+    screen.blit(lives_text, (WIDTH - 140, 15))
+    screen.blit(level_text, (WIDTH // 2 - 50, 15))
+
+    # Display game messages
     if game_state == "ready":
 
-        message = small_font.render(
-            "Press SPACE to start", True, YELLOW
+        if level == 1 and score == 0 and lives == 3:
+            message = "Press SPACE to start"
+
+        elif lives < 3:
+            message = "Life lost! Press SPACE to continue"
+
+        else:
+            message = f"Level {level}! Press SPACE to continue"
+
+        text = small_font.render(
+            message, True, YELLOW
         )
 
         screen.blit(
-            message,
-            (WIDTH // 2 - 110, HEIGHT // 2 + 80)
+            text,
+            (WIDTH // 2 - text.get_width() // 2,
+             HEIGHT // 2 + 80)
+        )
+
+    elif game_state == "paused":
+
+        text = font.render(
+            "PAUSED", True, YELLOW
+        )
+
+        instruction = small_font.render(
+            "Press SPACE to resume", True, WHITE
+        )
+
+        screen.blit(
+            text,
+            (WIDTH // 2 - text.get_width() // 2,
+             HEIGHT // 2)
+        )
+
+        screen.blit(
+            instruction,
+            (WIDTH // 2 - instruction.get_width() // 2,
+             HEIGHT // 2 + 45)
         )
 
     elif game_state == "game_over":
 
-        message = font.render(
+        text = font.render(
             "GAME OVER", True, RED
         )
 
-        restart_message = small_font.render(
+        instruction = small_font.render(
             "Press SPACE to restart", True, WHITE
         )
 
         screen.blit(
-            message,
-            (WIDTH // 2 - 90, HEIGHT // 2)
+            text,
+            (WIDTH // 2 - text.get_width() // 2,
+             HEIGHT // 2)
         )
 
         screen.blit(
-            restart_message,
-            (WIDTH // 2 - 110, HEIGHT // 2 + 50)
+            instruction,
+            (WIDTH // 2 - instruction.get_width() // 2,
+             HEIGHT // 2 + 50)
         )
 
     elif game_state == "won":
 
-        message = font.render(
+        text = font.render(
             "YOU WIN!", True, GREEN
         )
 
-        restart_message = small_font.render(
+        instruction = small_font.render(
             "Press SPACE to play again", True, WHITE
         )
 
         screen.blit(
-            message,
-            (WIDTH // 2 - 75, HEIGHT // 2)
+            text,
+            (WIDTH // 2 - text.get_width() // 2,
+             HEIGHT // 2)
         )
 
         screen.blit(
-            restart_message,
-            (WIDTH // 2 - 125, HEIGHT // 2 + 50)
+            instruction,
+            (WIDTH // 2 - instruction.get_width() // 2,
+             HEIGHT // 2 + 50)
         )
 
     pygame.display.update()
