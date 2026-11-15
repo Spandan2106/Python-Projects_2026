@@ -4,6 +4,7 @@
   <h1>🐍 Python Projects Showcase — 2026</h1>
   <p>A growing collection of Python projects, practical programs, and experiments built to strengthen programming fundamentals and explore real-world software concepts.</p>
 
+
   <p>
     <img src="https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.x"/>
     <img src="https://img.shields.io/badge/Project%20Type-Learning%20%26%20Practice-2ea44f?style=for-the-badge" alt="Learning and Practice"/>
