@@ -20,6 +20,7 @@
 
 ## 📌 About This Repository
 
+
 **Python-Projects_2026** is a hands-on collection of Python programs created while learning, practising, and improving software development skills.
 
 The repository is intended to grow over time—from small beginner-friendly scripts to more structured projects involving object-oriented programming, data structures, problem-solving, and backend-oriented design.
