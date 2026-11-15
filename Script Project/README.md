@@ -1,5 +1,6 @@
 # System Resource Monitor
 
+
 A Python script that monitors CPU and memory usage and sends an email alert if they exceed configurable thresholds.
 
 ## Features
