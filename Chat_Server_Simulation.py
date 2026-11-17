@@ -70,6 +70,5 @@ while True:
     elif choice == "3":
         username = input("Username: ")
         server.receive_messages(username)
-
     elif choice == "4":
         break
