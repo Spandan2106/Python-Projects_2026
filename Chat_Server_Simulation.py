@@ -41,7 +41,6 @@ class ChatServer:
         if not inbox:
             print("No messages!")
             return
-
         for msg in inbox:
             print(msg["sender"], ":", msg["message"])
         inbox.clear()
