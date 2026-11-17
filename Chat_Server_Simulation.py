@@ -37,7 +37,6 @@ class ChatServer:
             return
 
         inbox = self.users[username].inbox
-
         if not inbox:
             print("No messages!")
             return
