@@ -84,7 +84,6 @@ while True:
 
             if not connection.in_use:
                 leased.pop(cid)
-
         else:
             print("Connection not found!")
     elif choice == "4":
