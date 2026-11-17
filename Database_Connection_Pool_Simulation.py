@@ -90,6 +90,5 @@ while True:
 
     elif choice == "4":
         pool.status()
-
     elif choice == "5":
         break
