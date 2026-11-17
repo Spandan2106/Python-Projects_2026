@@ -44,7 +44,6 @@ class ChatServer:
 
         for msg in inbox:
             print(msg["sender"], ":", msg["message"])
-
         inbox.clear()
 
 
