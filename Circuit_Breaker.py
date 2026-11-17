@@ -67,7 +67,6 @@ while True:
 
     elif choice == "2":
         breaker.call(False)
-
     elif choice == "3":
         breaker.status()
     elif choice == "4":
