@@ -25,7 +25,6 @@ class Autocomplete:
 
             if char not in current.children:
                 return []
-
             current = current.children[char]
         results = []
 
