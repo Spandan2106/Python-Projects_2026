@@ -81,7 +81,6 @@ while True:
 
         if connection:
             pool.release(connection)
-
             if not connection.in_use:
                 leased.pop(cid)
         else:
