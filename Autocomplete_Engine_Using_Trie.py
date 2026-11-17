@@ -9,14 +9,11 @@ class Autocomplete:
         self.root = TrieNode()
 
     def add_word(self, word):
-
         current = self.root
         for char in word.lower():
             if char not in current.children:
                 current.children[char] = TrieNode()
-
             current = current.children[char]
-
         current.is_word = True
 
     def search(self, prefix):
