@@ -5,7 +5,6 @@ class TrieNode:
         self.is_word = False
 
 class Autocomplete:
-
     def __init__(self):
         self.root = TrieNode()
 
