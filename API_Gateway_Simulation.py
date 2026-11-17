@@ -12,7 +12,6 @@ class Service:
         }
 
 class APIGateway:
-
     def __init__(self):
         self.routes = {}
         self.api_keys = set()
