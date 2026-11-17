@@ -31,15 +31,11 @@ class Autocomplete:
         results = []
 
         def collect(node, word):
-
             if node.is_word:
                 results.append(word)
-
             for char in sorted(node.children):
                 collect(node.children[char], word + char)
-
         collect(current, prefix)
-
         return results[:10]
 
 
