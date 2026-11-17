@@ -17,10 +17,8 @@ class Autocomplete:
         current.is_word = True
 
     def search(self, prefix):
-
         current = self.root
         prefix = prefix.lower()
-
         for char in prefix:
             if char not in current.children:
                 return []
