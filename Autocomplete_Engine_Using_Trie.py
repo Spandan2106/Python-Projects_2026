@@ -63,5 +63,4 @@ while True:
 
     if prefix.lower() == "exit":
         break
-
     print("Suggestions:", autocomplete.search(prefix))
