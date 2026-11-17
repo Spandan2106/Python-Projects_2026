@@ -78,7 +78,6 @@ while True:
     elif choice == "3":
         cid = int(input("Connection ID: "))
         connection = leased.get(cid)
-
         if connection:
             pool.release(connection)
             if not connection.in_use:
