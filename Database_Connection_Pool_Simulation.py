@@ -17,7 +17,6 @@ class ConnectionPool:
         ]
 
     def acquire(self):
-
         for connection in self.connections:
             if not connection.in_use:
                 connection.in_use = True
@@ -25,9 +24,7 @@ class ConnectionPool:
                     "Connection acquired:",
                     connection.connection_id
                 )
-
                 return connection
-
         print("Connection pool exhausted!")
         return None
 
