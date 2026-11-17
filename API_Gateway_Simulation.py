@@ -11,7 +11,6 @@ class Service:
             "status": 200
         }
 
-
 class APIGateway:
 
     def __init__(self):
