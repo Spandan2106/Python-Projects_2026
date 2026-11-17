@@ -10,7 +10,6 @@ class CircuitBreaker:
     def __init__(self, threshold=3, timeout=5):
         self.threshold = threshold
         self.timeout = timeout
-
         self.failure_count = 0
         self.state = self.CLOSED
         self.opened_at = None
@@ -59,12 +58,10 @@ while True:
     print("2. Simulate Failure")
     print("3. Show Status")
     print("4. Exit")
-
     choice = input("Choice: ")
 
     if choice == "1":
         breaker.call(True)
-
     elif choice == "2":
         breaker.call(False)
     elif choice == "3":
