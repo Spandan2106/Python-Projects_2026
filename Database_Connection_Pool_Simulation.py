@@ -68,7 +68,6 @@ while True:
     elif choice == "2":
         cid = int(input("Connection ID: "))
         connection = leased.get(cid)
-
         if connection:
             connection.execute(input("Query: "))
         else:
