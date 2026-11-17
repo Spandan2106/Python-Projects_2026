@@ -60,13 +60,11 @@ while True:
 
     if choice == "1":
         server.register_user(input("Username: "))
-
     elif choice == "2":
         sender = input("Sender: ")
         receiver = input("Receiver: ")
         message = input("Message: ")
         server.send_message(sender, receiver, message)
-
     elif choice == "3":
         username = input("Username: ")
         server.receive_messages(username)
