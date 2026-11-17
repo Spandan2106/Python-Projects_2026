@@ -19,7 +19,6 @@ class ConnectionPool:
     def acquire(self):
 
         for connection in self.connections:
-
             if not connection.in_use:
                 connection.in_use = True
 
