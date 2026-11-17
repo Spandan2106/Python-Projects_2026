@@ -14,7 +14,6 @@ class ChatServer:
         if username in self.users:
             print("User already exists!")
             return
-
         self.users[username] = User(username)
         print("User registered!")
 
