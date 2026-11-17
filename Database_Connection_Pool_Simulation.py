@@ -56,15 +56,12 @@ while True:
     print("3. Release")
     print("4. Show Pool")
     print("5. Exit")
-
     choice = input("Choice: ")
 
     if choice == "1":
         connection = pool.acquire()
-
         if connection:
             leased[connection.connection_id] = connection
-
     elif choice == "2":
         cid = int(input("Connection ID: "))
         connection = leased.get(cid)
