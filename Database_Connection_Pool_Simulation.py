@@ -47,7 +47,6 @@ class ConnectionPool:
                 "IN USE" if connection.in_use else "FREE"
             )
 
-
 pool = ConnectionPool(2)
 leased = {}
 
