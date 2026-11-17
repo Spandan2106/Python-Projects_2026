@@ -52,7 +52,6 @@ while True:
     print("2. Send Message")
     print("3. Receive Messages")
     print("4. Exit")
-
     choice = input("Enter choice: ")
 
     if choice == "1":
