@@ -4,7 +4,6 @@ class TrieNode:
         self.children = {}
         self.is_word = False
 
-
 class Autocomplete:
 
     def __init__(self):
