@@ -21,7 +21,6 @@ class ConnectionPool:
         for connection in self.connections:
             if not connection.in_use:
                 connection.in_use = True
-
                 print(
                     "Connection acquired:",
                     connection.connection_id
