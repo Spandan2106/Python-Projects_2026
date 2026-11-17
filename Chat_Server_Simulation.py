@@ -65,7 +65,6 @@ while True:
         sender = input("Sender: ")
         receiver = input("Receiver: ")
         message = input("Message: ")
-
         server.send_message(sender, receiver, message)
 
     elif choice == "3":
