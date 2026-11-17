@@ -22,7 +22,6 @@ class Autocomplete:
         prefix = prefix.lower()
 
         for char in prefix:
-
             if char not in current.children:
                 return []
             current = current.children[char]
