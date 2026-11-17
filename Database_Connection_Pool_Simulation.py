@@ -33,11 +33,9 @@ class ConnectionPool:
         if connection not in self.connections:
             print("Invalid connection!")
             return
-
         if not connection.in_use:
             print("Connection already released!")
             return
-
         connection.in_use = False
         print("Connection released!")
 
