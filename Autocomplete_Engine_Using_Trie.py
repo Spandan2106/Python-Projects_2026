@@ -27,7 +27,6 @@ class Autocomplete:
                 return []
 
             current = current.children[char]
-
         results = []
 
         def collect(node, word):
