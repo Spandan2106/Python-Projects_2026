@@ -70,6 +70,5 @@ while True:
 
     elif choice == "3":
         breaker.status()
-
     elif choice == "4":
         break
