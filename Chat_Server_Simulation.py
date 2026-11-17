@@ -18,24 +18,19 @@ class ChatServer:
         print("User registered!")
 
     def send_message(self, sender, receiver, message):
-
         if sender not in self.users or receiver not in self.users:
             print("User not found!")
             return
-
         self.users[receiver].inbox.append({
             "sender": sender,
             "message": message
         })
-
         print("Message sent!")
 
     def receive_messages(self, username):
-
         if username not in self.users:
             print("User not found!")
             return
-
         inbox = self.users[username].inbox
         if not inbox:
             print("No messages!")
