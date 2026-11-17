@@ -87,7 +87,6 @@ while True:
 
         else:
             print("Connection not found!")
-
     elif choice == "4":
         pool.status()
     elif choice == "5":
