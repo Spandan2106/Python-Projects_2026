@@ -56,7 +56,6 @@ class WalletSystem:
 
         source.balance -= amount
         destination.balance += amount
-
         source.history.append(f"Sent {amount} to {receiver}")
         destination.history.append(f"Received {amount} from {sender}")
         print("Transfer successful!")
