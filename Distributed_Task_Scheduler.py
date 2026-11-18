@@ -74,7 +74,6 @@ class TaskScheduler:
             worker.join()
         print("Task Scheduler shut down gracefully.")
 
-# --- Example Usage ---
 if __name__ == "__main__":
     def sample_job(name, fail_prob=0.3):
         time.sleep(random.uniform(0.5, 1.5))
