@@ -87,6 +87,5 @@ if __name__ == "__main__":
 
     for i in range(1, 6):
         scheduler.submit_task(f"Task-{i}", priority=random.randint(1, 5), func=sample_job, args=(f"Task-{i}",))
-
     time.sleep(6)
     scheduler.shutdown()
