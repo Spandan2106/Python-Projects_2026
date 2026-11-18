@@ -39,7 +39,6 @@ while True:
         key = input("Enter key: ")
         value = input("Enter value: ")
         db.set(key, value)
-
     elif choice == "2":
         key = input("Enter key: ")
         db.get(key)
