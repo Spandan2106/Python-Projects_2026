@@ -115,6 +115,5 @@ while True:
                 print(transaction)
         else:
             print("Wallet not found!")
-
     elif choice == "7":
         break
