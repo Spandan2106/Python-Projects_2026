@@ -34,7 +34,6 @@ class WalletSystem:
         if user in self.wallets:
             print("Wallet already exists!")
             return
-
         self.wallets[user] = Wallet(user)
         print("Wallet created!")
 
