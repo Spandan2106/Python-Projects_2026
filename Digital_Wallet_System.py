@@ -98,7 +98,6 @@ while True:
         receiver = input("Receiver: ")
         amount = float(input("Amount: "))
         system.transfer(sender, receiver, amount)
-
     elif choice == "5":
         user = input("Username: ")
         if user in system.wallets:
