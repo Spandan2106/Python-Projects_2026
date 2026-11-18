@@ -85,7 +85,6 @@ while True:
         if user not in system.wallets:
             print("Wallet not found!")
             continue
-
         amount = float(input("Amount: "))
         if choice == "2":
             system.wallets[user].deposit(amount)
