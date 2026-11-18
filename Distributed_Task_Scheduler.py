@@ -81,7 +81,6 @@ if __name__ == "__main__":
         if random.random() < fail_prob:
             raise RuntimeError("Simulated processing error")
         print(f"--> Job '{name}' finished execution.")
-
     scheduler = TaskScheduler(num_workers=2)
     scheduler.start()
     for i in range(1, 6):
