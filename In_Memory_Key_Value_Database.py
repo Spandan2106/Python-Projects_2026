@@ -43,7 +43,6 @@ while True:
     elif choice == "2":
         key = input("Enter key: ")
         db.get(key)
-
     elif choice == "3":
         key = input("Enter key: ")
         db.delete(key)
