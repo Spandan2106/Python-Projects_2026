@@ -55,7 +55,6 @@ while True:
     elif choice == "3":
         floor = int(input("Enter destination floor: "))
         elevator.go_to_floor(floor)
-
     elif choice == "4":
         elevator.status()
     elif choice == "5":
