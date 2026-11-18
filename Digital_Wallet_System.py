@@ -42,7 +42,6 @@ class WalletSystem:
         if sender not in self.wallets or receiver not in self.wallets:
             print("Wallet not found!")
             return
-
         if sender == receiver or amount <= 0:
             print("Invalid transfer!")
             return
