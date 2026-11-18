@@ -81,7 +81,6 @@ while True:
 
     elif choice in ["2", "3"]:
         user = input("Username: ")
-
         if user not in system.wallets:
             print("Wallet not found!")
             continue
