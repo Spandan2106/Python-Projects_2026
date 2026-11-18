@@ -49,7 +49,6 @@ class WalletSystem:
 
         source = self.wallets[sender]
         destination = self.wallets[receiver]
-
         if source.balance < amount:
             print("Insufficient balance!")
             return
