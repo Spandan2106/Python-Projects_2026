@@ -78,7 +78,6 @@ while True:
 
     if choice == "1":
         system.create_wallet(input("Username: "))
-
     elif choice in ["2", "3"]:
         user = input("Username: ")
         if user not in system.wallets:
