@@ -50,6 +50,5 @@ while True:
 
     elif choice == "4":
         db.display()
-
     elif choice == "5":
         break
