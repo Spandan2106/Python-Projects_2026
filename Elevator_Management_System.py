@@ -43,7 +43,6 @@ while True:
     print("3. Go to Floor")
     print("4. Status")
     print("5. Exit")
-
     choice = input("Enter choice: ")
 
     if choice == "1":
