@@ -47,7 +47,6 @@ while True:
     elif choice == "3":
         key = input("Enter key: ")
         db.delete(key)
-
     elif choice == "4":
         db.display()
     elif choice == "5":
