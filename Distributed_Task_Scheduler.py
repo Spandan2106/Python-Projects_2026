@@ -84,7 +84,6 @@ if __name__ == "__main__":
 
     scheduler = TaskScheduler(num_workers=2)
     scheduler.start()
-
     for i in range(1, 6):
         scheduler.submit_task(f"Task-{i}", priority=random.randint(1, 5), func=sample_job, args=(f"Task-{i}",))
     time.sleep(6)
