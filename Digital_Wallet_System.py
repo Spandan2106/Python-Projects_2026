@@ -108,7 +108,6 @@ while True:
             print("Wallet not found!")
     elif choice == "6":
         user = input("Username: ")
-
         if user in system.wallets:
             for transaction in system.wallets[user].history:
                 print(transaction)
