@@ -46,7 +46,6 @@ class WalletSystem:
         if sender == receiver or amount <= 0:
             print("Invalid transfer!")
             return
-
         source = self.wallets[sender]
         destination = self.wallets[receiver]
         if source.balance < amount:
