@@ -101,7 +101,6 @@ while True:
 
     elif choice == "5":
         user = input("Username: ")
-
         if user in system.wallets:
             system.wallets[user].display()
         else:
