@@ -106,7 +106,6 @@ while True:
             system.wallets[user].display()
         else:
             print("Wallet not found!")
-
     elif choice == "6":
         user = input("Username: ")
 
