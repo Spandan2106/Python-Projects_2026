@@ -92,7 +92,6 @@ while True:
             system.wallets[user].deposit(amount)
         else:
             system.wallets[user].withdraw(amount)
-
     elif choice == "4":
         sender = input("Sender: ")
         receiver = input("Receiver: ")
