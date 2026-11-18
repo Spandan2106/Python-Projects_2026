@@ -9,7 +9,6 @@ class Wallet:
         if amount <= 0:
             print("Invalid amount!")
             return
-
         self.balance += amount
         self.history.append(f"Deposited {amount}")
 
