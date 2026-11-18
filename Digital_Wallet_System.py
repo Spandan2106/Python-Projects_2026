@@ -87,7 +87,6 @@ while True:
             continue
 
         amount = float(input("Amount: "))
-
         if choice == "2":
             system.wallets[user].deposit(amount)
         else:
