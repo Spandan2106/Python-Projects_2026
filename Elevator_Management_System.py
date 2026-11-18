@@ -48,7 +48,6 @@ while True:
 
     if choice == "1":
         elevator.move_up()
-
     elif choice == "2":
         elevator.move_down()
     elif choice == "3":
