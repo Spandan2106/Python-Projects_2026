@@ -32,7 +32,6 @@ while True:
     print("3. Delete")
     print("4. Display")
     print("5. Exit")
-
     choice = input("Enter choice: ")
 
     if choice == "1":
