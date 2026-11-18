@@ -59,7 +59,6 @@ class WalletSystem:
 
         source.history.append(f"Sent {amount} to {receiver}")
         destination.history.append(f"Received {amount} from {sender}")
-
         print("Transfer successful!")
 
 
