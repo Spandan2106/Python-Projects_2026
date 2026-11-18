@@ -53,7 +53,6 @@ class WalletSystem:
         if source.balance < amount:
             print("Insufficient balance!")
             return
-
         source.balance -= amount
         destination.balance += amount
         source.history.append(f"Sent {amount} to {receiver}")
