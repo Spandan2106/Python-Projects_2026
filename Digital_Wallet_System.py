@@ -38,7 +38,6 @@ class WalletSystem:
         print("Wallet created!")
 
     def transfer(self, sender, receiver, amount):
-
         if sender not in self.wallets or receiver not in self.wallets:
             print("Wallet not found!")
             return
