@@ -59,7 +59,6 @@ class RideSharingSystem:
             return
         ride.status = "Completed"
         ride.driver.available = True
-
         print("Ride completed!")
 
     def display_rides(self):
