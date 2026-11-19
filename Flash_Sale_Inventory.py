@@ -35,6 +35,8 @@ class FlashSaleClientSimulator:
 
     def simulate_user_purchase(self, user_id):
         success, message = self.system.reserve_item(user_id, self.item_id, quantity=1)
+        # Uncomment below for detailed logs per thread
+        # print(f"User {user_id}: {message}")
 
 # --- Example Usage ---
 if __name__ == "__main__":
