@@ -62,7 +62,6 @@ class RideSharingSystem:
         print("Ride completed!")
 
     def display_rides(self):
-
         for ride in self.rides.values():
             print(
                 ride.ride_id,
