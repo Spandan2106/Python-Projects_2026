@@ -37,7 +37,6 @@ class RideSharingSystem:
         if driver is None:
             print("No drivers available!")
             return
-
         self.ride_counter += 1
 
         ride = Ride(
