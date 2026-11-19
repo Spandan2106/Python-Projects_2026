@@ -22,7 +22,6 @@ class RateLimiter:
         )
 
         self.last_refill = current_time
-
         if self.tokens >= 1:
             self.tokens -= 1
             return True
