@@ -38,7 +38,6 @@ class RideSharingSystem:
             print("No drivers available!")
             return
         self.ride_counter += 1
-
         ride = Ride(
             self.ride_counter,
             passenger,
