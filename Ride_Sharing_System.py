@@ -43,7 +43,6 @@ class RideSharingSystem:
             passenger,
             driver
         )
-
         self.rides[self.ride_counter] = ride
         driver.available = False
 
