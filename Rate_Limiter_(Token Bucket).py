@@ -9,7 +9,6 @@ class RateLimiter:
         self.last_refill = time.time()
 
     def allow_request(self):
-
         current_time = time.time()
         elapsed = current_time - self.last_refill
         new_tokens = elapsed * self.refill_rate
