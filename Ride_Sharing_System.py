@@ -104,7 +104,6 @@ while True:
     elif choice == "2":
         passenger = input("Passenger Name: ")
         system.request_ride(passenger)
-
     elif choice == "3":
         ride_id = int(input("Ride ID: "))
         system.complete_ride(ride_id)
