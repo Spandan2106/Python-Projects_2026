@@ -18,7 +18,6 @@ class SlidingWindowRateLimiter:
         while client_history and client_history[0] < window_start:
             client_history.popleft()
 
-        # Check if the client has exceeded the limit
         if len(client_history) < self.limit:
             client_history.append(current_time)
             return True, f"Request allowed. Current usage: {len(client_history)}/{self.limit}"
