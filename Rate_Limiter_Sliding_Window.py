@@ -10,7 +10,6 @@ class SlidingWindowRateLimiter:
     def allow_request(self, client_id):
         current_time = time.time()
         window_start = current_time - self.window_size
-        
         client_history = self.requests[client_id]
 
         # Evict timestamps outside the current sliding window
