@@ -100,7 +100,6 @@ while True:
         driver_id = input("Driver ID: ")
         name = input("Driver Name: ")
         system.register_driver(driver_id, name)
-
     elif choice == "2":
         passenger = input("Passenger Name: ")
         system.request_ride(passenger)
