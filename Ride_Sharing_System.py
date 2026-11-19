@@ -45,7 +45,6 @@ class RideSharingSystem:
         )
         self.rides[self.ride_counter] = ride
         driver.available = False
-
         print("Ride assigned!")
         print("Ride ID:", ride.ride_id)
         print("Driver:", driver.name)
