@@ -20,7 +20,6 @@ class RateLimiter:
             self.capacity,
             self.tokens + new_tokens
         )
-
         self.last_refill = current_time
         if self.tokens >= 1:
             self.tokens -= 1
