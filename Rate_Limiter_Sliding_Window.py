@@ -36,7 +36,6 @@ if __name__ == "__main__":
         allowed, msg = limiter.allow_request(client)
         print(f"Request {i}: {msg}")
         time.sleep(0.5)
-
     print("\n--- Waiting for 5 seconds window to slide... ---")
     time.sleep(5)
     allowed, msg = limiter.allow_request(client)
