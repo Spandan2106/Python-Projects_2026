@@ -12,7 +12,7 @@ class SlidingWindowRateLimiter:
         window_start = current_time - self.window_size
         client_history = self.requests[client_id]
 
-        # Evict timestamps outside the current sliding window
+
         while client_history and client_history[0] < window_start:
             client_history.popleft()
 
