@@ -93,7 +93,6 @@ while True:
     print("3. Complete Ride")
     print("4. Display Rides")
     print("5. Exit")
-
     choice = input("Enter choice: ")
 
     if choice == "1":
