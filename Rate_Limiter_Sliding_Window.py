@@ -27,7 +27,6 @@ class SlidingWindowRateLimiter:
 
 # --- Example Usage ---
 if __name__ == "__main__":
-    # Allow 3 requests per 5 seconds window
     limiter = SlidingWindowRateLimiter(limit=3, window_size_seconds=5)
     client = "user_abc"
     print(f"--- Simulating request bursts for '{client}' ---")
