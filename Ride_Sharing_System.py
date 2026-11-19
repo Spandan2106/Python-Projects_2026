@@ -26,7 +26,6 @@ class RideSharingSystem:
         if driver_id in self.drivers:
             print("Driver already registered!")
             return
-
         self.drivers[driver_id] = Driver(driver_id, name)
         print("Driver registered!")
 
