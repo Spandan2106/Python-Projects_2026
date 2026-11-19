@@ -54,7 +54,6 @@ class RideSharingSystem:
         if ride is None:
             print("Ride not found!")
             return
-
         if ride.status != "Assigned":
             print("Ride already completed!")
             return
