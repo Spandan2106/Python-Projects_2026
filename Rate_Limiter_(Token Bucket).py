@@ -22,8 +22,6 @@ class RateLimiter:
             return True
         return False
 
-
-# Main class
 limiter = RateLimiter(5, 1)
 
 while True:
