@@ -25,7 +25,6 @@ class SlidingWindowRateLimiter:
         else:
             return False, f"Rate limit exceeded. Try again later."
 
-# --- Example Usage ---
 if __name__ == "__main__":
     limiter = SlidingWindowRateLimiter(limit=3, window_size_seconds=5)
     client = "user_abc"
