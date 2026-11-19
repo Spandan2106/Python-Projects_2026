@@ -111,6 +111,5 @@ while True:
 
     elif choice == "4":
         system.display_rides()
-
     elif choice == "5":
         break
