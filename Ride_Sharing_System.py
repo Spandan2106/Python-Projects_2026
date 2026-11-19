@@ -108,7 +108,6 @@ while True:
     elif choice == "3":
         ride_id = int(input("Ride ID: "))
         system.complete_ride(ride_id)
-
     elif choice == "4":
         system.display_rides()
     elif choice == "5":
