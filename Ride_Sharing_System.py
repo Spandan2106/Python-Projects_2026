@@ -23,7 +23,6 @@ class RideSharingSystem:
         self.ride_counter = 0
 
     def register_driver(self, driver_id, name):
-
         if driver_id in self.drivers:
             print("Driver already registered!")
             return
