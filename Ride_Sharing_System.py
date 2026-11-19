@@ -34,7 +34,6 @@ class RideSharingSystem:
             (d for d in self.drivers.values() if d.available),
             None
         )
-
         if driver is None:
             print("No drivers available!")
             return
