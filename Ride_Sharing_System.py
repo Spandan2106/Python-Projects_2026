@@ -50,7 +50,6 @@ class RideSharingSystem:
         print("Driver:", driver.name)
 
     def complete_ride(self, ride_id):
-
         ride = self.rides.get(ride_id)
 
         if ride is None:
