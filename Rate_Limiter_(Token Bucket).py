@@ -34,7 +34,6 @@ class RateLimiter:
 limiter = RateLimiter(5, 1)
 
 while True:
-
     input("\nPress Enter to send a request...")
     if limiter.allow_request():
         print("Request Allowed!")
