@@ -26,7 +26,6 @@ class RateLimiter:
         if self.tokens >= 1:
             self.tokens -= 1
             return True
-
         return False
 
 
