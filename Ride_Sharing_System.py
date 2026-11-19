@@ -51,7 +51,6 @@ class RideSharingSystem:
 
     def complete_ride(self, ride_id):
         ride = self.rides.get(ride_id)
-
         if ride is None:
             print("Ride not found!")
             return
