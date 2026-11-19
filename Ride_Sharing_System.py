@@ -30,7 +30,6 @@ class RideSharingSystem:
         print("Driver registered!")
 
     def request_ride(self, passenger):
-
         driver = next(
             (d for d in self.drivers.values() if d.available),
             None
