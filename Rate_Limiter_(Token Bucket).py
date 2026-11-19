@@ -13,7 +13,6 @@ class RateLimiter:
         current_time = time.time()
 
         elapsed = current_time - self.last_refill
-
         new_tokens = elapsed * self.refill_rate
         self.tokens = min(
             self.capacity,
