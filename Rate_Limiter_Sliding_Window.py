@@ -5,7 +5,6 @@ class SlidingWindowRateLimiter:
     def __init__(self, limit=5, window_size_seconds=60):
         self.limit = limit
         self.window_size = window_size_seconds
-        
         self.requests = defaultdict(deque)
 
     def allow_request(self, client_id):
