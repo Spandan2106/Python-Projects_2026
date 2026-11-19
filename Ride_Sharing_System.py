@@ -57,7 +57,6 @@ class RideSharingSystem:
         if ride.status != "Assigned":
             print("Ride already completed!")
             return
-
         ride.status = "Completed"
         ride.driver.available = True
 
