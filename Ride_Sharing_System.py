@@ -84,7 +84,6 @@ class RideSharingSystem:
                 ride.status
             )
 
-
 system = RideSharingSystem()
 
 while True:
