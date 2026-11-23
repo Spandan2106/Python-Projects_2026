@@ -58,7 +58,6 @@ class LoadBalancer:
                 "Capacity:", server.capacity,
                 "Healthy:", server.healthy
             )
-
 lb = LoadBalancer()
 lb.add_server(Server("Server-A", 2))
 lb.add_server(Server("Server-B", 2))
