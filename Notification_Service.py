@@ -43,7 +43,6 @@ while True:
             service.send_sms(user, message)
         else:
             service.send_push(user, message)
-
     elif choice == "4":
         service.show_history()
     elif choice == "5":
