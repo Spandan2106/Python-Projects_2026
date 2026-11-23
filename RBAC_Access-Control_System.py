@@ -9,7 +9,6 @@ class AccessControl:
     def __init__(self):
         self.roles = {}
         self.users = {}
-
     def create_role(self, name):
 
         if name in self.roles:
