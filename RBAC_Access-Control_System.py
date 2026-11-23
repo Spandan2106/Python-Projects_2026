@@ -13,7 +13,6 @@ class AccessControl:
         if name in self.roles:
             print("Role already exists!")
             return
-
         self.roles[name] = Role(name)
 
     def grant_permission(self, role, permission):
