@@ -62,7 +62,6 @@ while True:
 
     elif choice == "3":
         print("Total:", order.calculate_bill())
-
     elif choice == "4":
         order.place_order()
     elif choice == "5":
