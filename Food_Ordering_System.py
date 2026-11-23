@@ -65,7 +65,6 @@ while True:
 
     elif choice == "4":
         order.place_order()
-
     elif choice == "5":
         order.track_order()
     elif choice == "6":
