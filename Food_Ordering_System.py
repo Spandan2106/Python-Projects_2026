@@ -28,7 +28,6 @@ class FoodOrder:
         if not self.cart:
             print("Cart is empty!")
             return
-
         print("Order placed!")
         print("Total Bill:", self.calculate_bill())
         self.status = "Preparing"
