@@ -36,7 +36,6 @@ class LoadBalancer:
         print("All servers are unavailable!")
     def complete_request(self, name):
         for server in self.servers:
-
             if server.name == name:
                 if server.active_requests > 0:
                     server.active_requests -= 1
