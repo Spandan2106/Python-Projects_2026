@@ -88,7 +88,6 @@ while True:
 
     elif choice == "2":
         lb.complete_request(input("Server Name: "))
-
     elif choice == "3":
         name = input("Server Name: ")
         for server in lb.servers:
