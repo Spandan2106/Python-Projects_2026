@@ -4,7 +4,6 @@ class Server:
         self.capacity = capacity
         self.active_requests = 0
         self.healthy = True
-
     def can_accept(self):
         return (
             self.healthy
