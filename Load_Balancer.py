@@ -25,7 +25,6 @@ class LoadBalancer:
             self.pointer = (
                 self.pointer + 1
             ) % len(self.servers)
-
             if server.can_accept():
                 server.active_requests += 1
 
