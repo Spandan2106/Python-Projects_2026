@@ -8,7 +8,6 @@ class FoodOrder:
         }
         self.cart = {}
         self.status = "Not Ordered"
-
     def display_menu(self):
         for item, price in self.menu.items():
             print(item, ":", price)
