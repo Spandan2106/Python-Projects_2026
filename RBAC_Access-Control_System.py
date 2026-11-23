@@ -5,7 +5,6 @@ class Role:
     def grant(self, permission):
         self.permissions.add(permission)
 
-
 class AccessControl:
 
     def __init__(self):
