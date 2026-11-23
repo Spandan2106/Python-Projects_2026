@@ -1,7 +1,6 @@
 class Notification:
     def __init__(self):
         self.history = []
-
     def send_email(self, user, message):
         print("Email sent to:", user)
         print("Message:", message)
