@@ -57,7 +57,6 @@ while True:
 
     if choice == "1":
         acl.create_role(input("Role Name: "))
-
     elif choice == "2":
         role = input("Role: ")
         permission = input("Permission: ")
