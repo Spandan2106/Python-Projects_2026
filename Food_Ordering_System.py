@@ -24,7 +24,6 @@ class FoodOrder:
         for item, quantity in self.cart.items():
             total += self.menu[item] * quantity
         return total
-
     def place_order(self):
         if not self.cart:
             print("Cart is empty!")
