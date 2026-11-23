@@ -18,7 +18,6 @@ class LoadBalancer:
         self.servers.append(server)
 
     def route_request(self, request_id):
-
         if not self.servers:
             print("No servers available!")
             return
