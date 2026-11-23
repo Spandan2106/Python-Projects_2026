@@ -61,7 +61,6 @@ while True:
     elif choice == "2":
         role = input("Role: ")
         permission = input("Permission: ")
-
         acl.grant_permission(role, permission)
     elif choice == "3":
         user = input("Username: ")
