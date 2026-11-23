@@ -9,7 +9,6 @@ class Server:
             self.healthy
             and self.active_requests < self.capacity
         )
-
 class LoadBalancer:
     def __init__(self):
         self.servers = []
