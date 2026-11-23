@@ -14,7 +14,6 @@ class LoadBalancer:
     def __init__(self):
         self.servers = []
         self.pointer = 0
-
     def add_server(self, server):
         self.servers.append(server)
 
