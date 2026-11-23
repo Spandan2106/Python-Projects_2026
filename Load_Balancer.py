@@ -82,7 +82,6 @@ while True:
     print("5. Exit")
 
     choice = input("Choice: ")
-
     if choice == "1":
         lb.route_request(input("Request ID: "))
     elif choice == "2":
