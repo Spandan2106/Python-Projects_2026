@@ -9,7 +9,6 @@ class Notification:
         print("SMS sent to:", user)
         print("Message:", message)
         self.history.append(("SMS", user, message))
-
     def send_push(self, user, message):
         print("Push notification sent to:", user)
         print("Message:", message)
