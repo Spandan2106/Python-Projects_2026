@@ -72,6 +72,5 @@ while True:
     elif choice == "6":
         status = input("Enter new status: ")
         order.update_status(status)
-
     elif choice == "7":
         break
