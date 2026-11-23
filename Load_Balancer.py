@@ -11,7 +11,6 @@ class Server:
         )
 
 class LoadBalancer:
-
     def __init__(self):
         self.servers = []
         self.pointer = 0
