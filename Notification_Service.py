@@ -46,6 +46,5 @@ while True:
 
     elif choice == "4":
         service.show_history()
-
     elif choice == "5":
         break
