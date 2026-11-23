@@ -1,5 +1,4 @@
 class FoodOrder:
-
     def __init__(self):
         self.menu = {
             "Burger": 100,
