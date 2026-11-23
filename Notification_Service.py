@@ -32,7 +32,6 @@ while True:
     print("5. Exit")
 
     choice = input("Enter choice: ")
-
     if choice in ["1", "2", "3"]:
         user = input("Enter recipient: ")
         message = input("Enter message: ")
