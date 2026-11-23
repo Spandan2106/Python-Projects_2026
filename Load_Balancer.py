@@ -21,7 +21,6 @@ class LoadBalancer:
             print("No servers available!")
             return
         for _ in range(len(self.servers)):
-
             server = self.servers[self.pointer]
 
             self.pointer = (
