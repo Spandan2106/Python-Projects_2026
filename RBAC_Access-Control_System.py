@@ -30,7 +30,6 @@ class AccessControl:
 
             if permission in self.roles[role].permissions:
                 return True
-
         return False
 
 
