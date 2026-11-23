@@ -5,7 +5,6 @@ class Notification:
         print("Email sent to:", user)
         print("Message:", message)
         self.history.append(("EMAIL", user, message))
-
     def send_sms(self, user, message):
         print("SMS sent to:", user)
         print("Message:", message)
