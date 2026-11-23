@@ -13,7 +13,6 @@ class Notification:
         print("Push notification sent to:", user)
         print("Message:", message)
         self.history.append(("PUSH", user, message))
-
     def show_history(self):
         for notification in self.history:
             print(notification)
