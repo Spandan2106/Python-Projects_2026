@@ -57,7 +57,6 @@ lb = LoadBalancer()
 lb.add_server(Server("Server-A", 2))
 lb.add_server(Server("Server-B", 2))
 lb.add_server(Server("Server-C", 2))
-
 while True:
     print("\n1. Route Request")
     print("2. Complete Request")
