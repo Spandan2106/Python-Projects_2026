@@ -21,7 +21,6 @@ class FoodOrder:
             print("Item added!")
     def calculate_bill(self):
         total = 0
-
         for item, quantity in self.cart.items():
             total += self.menu[item] * quantity
 
