@@ -19,7 +19,6 @@ class FoodOrder:
         else:
             self.cart[item] = self.cart.get(item, 0) + quantity
             print("Item added!")
-
     def calculate_bill(self):
         total = 0
 
