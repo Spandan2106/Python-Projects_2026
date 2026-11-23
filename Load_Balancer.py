@@ -22,7 +22,6 @@ class LoadBalancer:
             return
         for _ in range(len(self.servers)):
             server = self.servers[self.pointer]
-
             self.pointer = (
                 self.pointer + 1
             ) % len(self.servers)
