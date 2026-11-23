@@ -27,7 +27,6 @@ class LoadBalancer:
             ) % len(self.servers)
             if server.can_accept():
                 server.active_requests += 1
-
                 print(
                     request_id,
                     "routed to",
