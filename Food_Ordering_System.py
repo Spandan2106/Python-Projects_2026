@@ -33,7 +33,6 @@ class FoodOrder:
         self.status = "Preparing"
     def track_order(self):
         print("Order Status:", self.status)
-
     def update_status(self, status):
         self.status = status
         print("Status updated!")
