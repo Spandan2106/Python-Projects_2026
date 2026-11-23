@@ -67,7 +67,6 @@ while True:
     elif choice == "3":
         user = input("Username: ")
         role = input("Role: ")
-
         acl.assign_role(user, role)
     elif choice == "4":
         user = input("Username: ")
