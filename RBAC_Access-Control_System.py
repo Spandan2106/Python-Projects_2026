@@ -78,6 +78,5 @@ while True:
             print("ACCESS GRANTED")
         else:
             print("ACCESS DENIED")
-
     elif choice == "5":
         break
