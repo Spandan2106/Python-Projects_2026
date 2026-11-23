@@ -80,7 +80,6 @@ while True:
     print("3. Toggle Server Health")
     print("4. Display Servers")
     print("5. Exit")
-
     choice = input("Choice: ")
     if choice == "1":
         lb.route_request(input("Request ID: "))
