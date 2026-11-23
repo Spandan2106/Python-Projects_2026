@@ -54,7 +54,6 @@ while True:
     print("5. Exit")
 
     choice = input("Choice: ")
-
     if choice == "1":
         acl.create_role(input("Role Name: "))
     elif choice == "2":
