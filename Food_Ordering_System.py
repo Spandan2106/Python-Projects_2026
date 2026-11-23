@@ -54,7 +54,6 @@ while True:
 
     if choice == "1":
         order.display_menu()
-
     elif choice == "2":
         item = input("Enter item: ")
         quantity = int(input("Quantity: "))
