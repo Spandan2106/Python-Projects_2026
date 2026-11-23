@@ -31,7 +31,6 @@ class FoodOrder:
         print("Order placed!")
         print("Total Bill:", self.calculate_bill())
         self.status = "Preparing"
-
     def track_order(self):
         print("Order Status:", self.status)
 
