@@ -17,7 +17,6 @@ class Notification:
         for notification in self.history:
             print(notification)
 
-
 service = Notification()
 
 while True:
