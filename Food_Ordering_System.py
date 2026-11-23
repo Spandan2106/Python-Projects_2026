@@ -37,7 +37,6 @@ class FoodOrder:
         self.status = status
         print("Status updated!")
 
-
 order = FoodOrder()
 
 while True:
