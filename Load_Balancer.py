@@ -47,7 +47,6 @@ class LoadBalancer:
         print("Server not found!")
 
     def display(self):
-
         for server in self.servers:
             print(
                 server.name,
