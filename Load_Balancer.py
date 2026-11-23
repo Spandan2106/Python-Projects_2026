@@ -42,7 +42,6 @@ class LoadBalancer:
                 else:
                     print("No active requests!")
                 return
-
         print("Server not found!")
     def display(self):
         for server in self.servers:
