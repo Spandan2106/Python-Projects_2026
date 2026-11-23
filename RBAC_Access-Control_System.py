@@ -20,7 +20,6 @@ class AccessControl:
             return
         self.roles[role].grant(permission)
     def assign_role(self, username, role):
-
         if role not in self.roles:
             print("Role not found!")
             return
