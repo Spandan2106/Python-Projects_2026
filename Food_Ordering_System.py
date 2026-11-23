@@ -11,7 +11,6 @@ class FoodOrder:
     def display_menu(self):
         for item, price in self.menu.items():
             print(item, ":", price)
-
     def add_item(self, item, quantity):
         if item not in self.menu:
             print("Item unavailable!")
