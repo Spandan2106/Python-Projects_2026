@@ -6,7 +6,6 @@ class FoodOrder:
             "Pasta": 180,
             "Sandwich": 80
         }
-
         self.cart = {}
         self.status = "Not Ordered"
 
