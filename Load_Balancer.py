@@ -10,7 +10,6 @@ class Server:
             and self.active_requests < self.capacity
         )
 
-
 class LoadBalancer:
 
     def __init__(self):
