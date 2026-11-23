@@ -24,7 +24,6 @@ class AccessControl:
             print("Role not found!")
             return
         self.users.setdefault(username, set()).add(role)
-
     def authorize(self, username, permission):
 
         for role in self.users.get(username, set()):
