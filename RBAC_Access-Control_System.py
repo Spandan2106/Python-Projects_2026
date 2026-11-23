@@ -38,7 +38,6 @@ acl = AccessControl()
 
 acl.create_role("admin")
 acl.create_role("reader")
-
 acl.grant_permission("admin", "user:create")
 acl.grant_permission("admin", "user:delete")
 acl.grant_permission("reader", "user:read")
