@@ -85,7 +85,6 @@ while True:
 
     if choice == "1":
         lb.route_request(input("Request ID: "))
-
     elif choice == "2":
         lb.complete_request(input("Server Name: "))
     elif choice == "3":
