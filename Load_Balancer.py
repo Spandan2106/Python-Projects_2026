@@ -91,7 +91,6 @@ while True:
 
     elif choice == "3":
         name = input("Server Name: ")
-
         for server in lb.servers:
             if server.name == name:
                 server.healthy = not server.healthy
@@ -99,7 +98,6 @@ while True:
                 break
         else:
             print("Server not found!")
-
     elif choice == "4":
         lb.display()
     elif choice == "5":
