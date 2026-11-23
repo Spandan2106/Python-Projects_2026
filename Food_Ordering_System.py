@@ -59,7 +59,6 @@ while True:
         item = input("Enter item: ")
         quantity = int(input("Quantity: "))
         order.add_item(item, quantity)
-
     elif choice == "3":
         print("Total:", order.calculate_bill())
     elif choice == "4":
