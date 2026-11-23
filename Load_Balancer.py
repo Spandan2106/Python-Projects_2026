@@ -33,7 +33,6 @@ class LoadBalancer:
                     server.name
                 )
                 return
-
         print("All servers are unavailable!")
 
     def complete_request(self, name):
