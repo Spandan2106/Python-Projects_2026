@@ -73,7 +73,6 @@ while True:
     elif choice == "4":
         user = input("Username: ")
         permission = input("Permission: ")
-
         if acl.authorize(user, permission):
             print("ACCESS GRANTED")
         else:
