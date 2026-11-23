@@ -68,7 +68,6 @@ while True:
 
     elif choice == "5":
         order.track_order()
-
     elif choice == "6":
         status = input("Enter new status: ")
         order.update_status(status)
