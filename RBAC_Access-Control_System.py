@@ -25,7 +25,6 @@ class AccessControl:
             return
         self.users.setdefault(username, set()).add(role)
     def authorize(self, username, permission):
-
         for role in self.users.get(username, set()):
             if permission in self.roles[role].permissions:
                 return True
