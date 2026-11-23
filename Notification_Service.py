@@ -30,7 +30,6 @@ while True:
     print("3. Push Notification")
     print("4. History")
     print("5. Exit")
-
     choice = input("Enter choice: ")
     if choice in ["1", "2", "3"]:
         user = input("Enter recipient: ")
