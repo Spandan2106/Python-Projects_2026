@@ -32,7 +32,6 @@ class LoadBalancer:
                     "routed to",
                     server.name
                 )
-
                 return
 
         print("All servers are unavailable!")
