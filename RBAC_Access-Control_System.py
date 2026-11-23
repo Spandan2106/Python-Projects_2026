@@ -6,7 +6,6 @@ class Role:
         self.permissions.add(permission)
 
 class AccessControl:
-
     def __init__(self):
         self.roles = {}
         self.users = {}
