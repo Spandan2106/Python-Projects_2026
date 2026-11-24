@@ -28,7 +28,6 @@ while True:
     print("3. Display Tasks")
     print("4. Exit")
     choice = input("Enter choice: ")
-
     if choice == "1":
         name = input("Task name: ")
         priority = int(input("Priority (1 = highest): "))
