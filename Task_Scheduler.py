@@ -22,7 +22,6 @@ class TaskScheduler:
         for priority, _, name in sorted(self.tasks):
             print(name, "- Priority:", priority)
 scheduler = TaskScheduler()
-
 while True:
     print("\n1. Add Task")
     print("2. Execute Task")
