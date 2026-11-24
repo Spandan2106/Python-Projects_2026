@@ -6,7 +6,6 @@ class TaskScheduler:
         self.counter = 0
     def add_task(self, name, priority):
         self.counter += 1
-
         heapq.heappush(
             self.tasks,
             (priority, self.counter, name)
