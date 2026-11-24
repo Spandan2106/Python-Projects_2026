@@ -50,7 +50,6 @@ while True:
     print("4. Exit")
 
     choice = input("Choice: ")
-
     if choice == "1":
         name = input("Metric Name: ")
         try:
