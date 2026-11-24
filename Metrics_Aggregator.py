@@ -15,7 +15,6 @@ class MetricsAggregator:
         print("Minimum:", min(values))
         print("Maximum:", max(values))
         average = sum(values) / len(values)
-
         print("Average:", round(average, 2))
 
     def display_all(self):
