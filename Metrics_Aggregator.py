@@ -6,7 +6,6 @@ class MetricsAggregator:
         self.metrics[name].append(float(value))
         print("Metric recorded!")
     def summary(self, name):
-
         values = self.metrics.get(name, [])
 
         if not values:
