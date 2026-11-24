@@ -19,7 +19,6 @@ class TaskScheduler:
 
         print("Executing:", name)
         print("Priority:", priority)
-
     def display_tasks(self):
         for priority, _, name in sorted(self.tasks):
             print(name, "- Priority:", priority)
