@@ -10,7 +10,6 @@ class TaskScheduler:
             self.tasks,
             (priority, self.counter, name)
         )
-
         print("Task added!")
 
     def execute_task(self):
