@@ -4,7 +4,6 @@ class TaskScheduler:
     def __init__(self):
         self.tasks = []
         self.counter = 0
-
     def add_task(self, name, priority):
         self.counter += 1
 
