@@ -5,7 +5,6 @@ class MetricsAggregator:
     def record(self, name, value):
         self.metrics[name].append(float(value))
         print("Metric recorded!")
-
     def summary(self, name):
 
         values = self.metrics.get(name, [])
