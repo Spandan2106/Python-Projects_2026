@@ -10,7 +10,6 @@ class MetricsAggregator:
         if not values:
             print("No metrics found!")
             return
-
         print("\nMetric:", name)
         print("Count:", len(values))
         print("Minimum:", min(values))
