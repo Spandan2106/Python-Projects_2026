@@ -11,7 +11,6 @@ class TaskScheduler:
             (priority, self.counter, name)
         )
         print("Task added!")
-
     def execute_task(self):
         if not self.tasks:
             print("No pending tasks!")
