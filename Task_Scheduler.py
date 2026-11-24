@@ -15,7 +15,6 @@ class TaskScheduler:
         if not self.tasks:
             print("No pending tasks!")
             return
-
         priority, _, name = heapq.heappop(self.tasks)
 
         print("Executing:", name)
