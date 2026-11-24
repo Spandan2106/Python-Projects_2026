@@ -1,5 +1,4 @@
 from collections import defaultdict
-
 class MetricsAggregator:
 
     def __init__(self):
