@@ -2,7 +2,6 @@ from collections import defaultdict
 class MetricsAggregator:
     def __init__(self):
         self.metrics = defaultdict(list)
-
     def record(self, name, value):
 
         self.metrics[name].append(float(value))
