@@ -21,7 +21,6 @@ class TaskScheduler:
     def display_tasks(self):
         for priority, _, name in sorted(self.tasks):
             print(name, "- Priority:", priority)
-
 scheduler = TaskScheduler()
 
 while True:
