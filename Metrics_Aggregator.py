@@ -66,6 +66,5 @@ while True:
 
     elif choice == "3":
         metrics.display_all()
-
     elif choice == "4":
         break
