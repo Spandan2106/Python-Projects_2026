@@ -34,7 +34,6 @@ while True:
         scheduler.add_task(name, priority)
     elif choice == "2":
         scheduler.execute_task()
-
     elif choice == "3":
         scheduler.display_tasks()
     elif choice == "4":
