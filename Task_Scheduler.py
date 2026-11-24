@@ -1,7 +1,6 @@
 import heapq
 
 class TaskScheduler:
-
     def __init__(self):
         self.tasks = []
         self.counter = 0
