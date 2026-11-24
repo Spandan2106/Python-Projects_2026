@@ -27,7 +27,6 @@ while True:
     print("2. Execute Task")
     print("3. Display Tasks")
     print("4. Exit")
-
     choice = input("Enter choice: ")
 
     if choice == "1":
