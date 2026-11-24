@@ -38,7 +38,6 @@ while True:
     print("2. Show Summary")
     print("3. Display All")
     print("4. Exit")
-
     choice = input("Choice: ")
     if choice == "1":
         name = input("Metric Name: ")
