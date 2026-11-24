@@ -60,7 +60,6 @@ while True:
             metrics.record(name, value)
         except ValueError:
             print("Enter a valid number!")
-
     elif choice == "2":
         metrics.summary(input("Metric Name: "))
 
