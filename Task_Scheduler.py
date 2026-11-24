@@ -32,7 +32,6 @@ while True:
         name = input("Task name: ")
         priority = int(input("Priority (1 = highest): "))
         scheduler.add_task(name, priority)
-
     elif choice == "2":
         scheduler.execute_task()
 
