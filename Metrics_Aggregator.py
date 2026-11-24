@@ -33,7 +33,6 @@ class MetricsAggregator:
 metrics = MetricsAggregator()
 
 while True:
-
     print("\n1. Record Metric")
     print("2. Show Summary")
     print("3. Display All")
