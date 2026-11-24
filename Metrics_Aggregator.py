@@ -54,7 +54,6 @@ while True:
     if choice == "1":
 
         name = input("Metric Name: ")
-
         try:
             value = float(input("Value: "))
             metrics.record(name, value)
