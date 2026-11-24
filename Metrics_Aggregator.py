@@ -19,7 +19,6 @@ class MetricsAggregator:
     def display_all(self):
         for name, values in self.metrics.items():
             average = sum(values) / len(values)
-
             print(
                 name,
                 "Count:", len(values),
