@@ -47,6 +47,5 @@ while True:
 
     elif choice == "3":
         scheduler.display_tasks()
-
     elif choice == "4":
         break
