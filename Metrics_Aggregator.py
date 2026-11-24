@@ -29,7 +29,6 @@ class MetricsAggregator:
                 "Average:", round(average, 2)
             )
 
-
 metrics = MetricsAggregator()
 while True:
     print("\n1. Record Metric")
