@@ -63,7 +63,6 @@ class Hotel:
 
 
 hotel = Hotel()
-
 while True:
     print("\n1. Display Rooms")
     print("2. Book Room")
