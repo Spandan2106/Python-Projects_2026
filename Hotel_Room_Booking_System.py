@@ -36,7 +36,6 @@ class Hotel:
         }
         print("Booking successful!")
         print("Booking ID:", self.booking_id)
-
     def cancel_booking(self, booking_id):
         booking = self.bookings.pop(booking_id, None)
 
