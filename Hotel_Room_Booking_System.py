@@ -72,7 +72,6 @@ while True:
     print("5. Exit")
 
     choice = input("Enter choice: ")
-
     if choice == "1":
         hotel.display_rooms()
     elif choice == "2":
