@@ -49,7 +49,6 @@ class Hotel:
 
         self.rooms[booking["room"]].available = True
         print("Booking cancelled!")
-
     def show_bookings(self):
         for bid, booking in self.bookings.items():
             print(bid, booking)
