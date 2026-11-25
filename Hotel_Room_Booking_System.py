@@ -25,7 +25,6 @@ class Hotel:
         if room is None:
             print("Room not found!")
             return
-
         if not room.available:
             print("Room already booked!")
             return
