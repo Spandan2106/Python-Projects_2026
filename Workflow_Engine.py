@@ -38,7 +38,6 @@ class Workflow:
 
         print("\nWorkflow ID:", self.workflow_id)
         print("Status:", self.status)
-
         print(
             "Progress:",
             self.current_step,
