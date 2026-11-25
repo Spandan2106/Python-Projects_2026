@@ -23,7 +23,6 @@ class Inventory:
         if self.products[product_id].quantity + quantity < 0:
             print("Insufficient stock!")
             return
-
         self.products[product_id].quantity += quantity
         print("Stock updated!")
 
