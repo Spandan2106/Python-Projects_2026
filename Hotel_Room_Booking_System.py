@@ -80,7 +80,6 @@ while True:
         room = int(input("Room Number: "))
         customer = input("Customer Name: ")
         hotel.book_room(room, customer)
-
     elif choice == "3":
         bid = int(input("Booking ID: "))
         hotel.cancel_booking(bid)
