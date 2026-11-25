@@ -25,7 +25,6 @@ class Inventory:
             return
         self.products[product_id].quantity += quantity
         print("Stock updated!")
-
     def search_product(self, product_id):
         product = self.products.get(product_id)
 
