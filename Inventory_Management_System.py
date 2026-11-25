@@ -20,7 +20,6 @@ class Inventory:
         if product_id not in self.products:
             print("Product not found!")
             return
-
         if self.products[product_id].quantity + quantity < 0:
             print("Insufficient stock!")
             return
