@@ -41,7 +41,6 @@ class Inventory:
         )
         print("Total Inventory Value:", total)
 inventory = Inventory()
-
 while True:
     print("\n1. Add Product")
     print("2. Update Stock")
