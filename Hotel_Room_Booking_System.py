@@ -75,7 +75,6 @@ while True:
 
     if choice == "1":
         hotel.display_rooms()
-
     elif choice == "2":
         room = int(input("Room Number: "))
         customer = input("Customer Name: ")
