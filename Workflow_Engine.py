@@ -63,7 +63,6 @@ workflow = Workflow(
 )
 
 while True:
-
     print("\n1. Start Workflow")
     print("2. Execute Next Step")
     print("3. Fail Workflow")
