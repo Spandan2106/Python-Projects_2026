@@ -87,6 +87,5 @@ while True:
 
     elif choice == "4":
         hotel.show_bookings()
-
     elif choice == "5":
         break
