@@ -21,7 +21,6 @@ class Workflow:
             return
         step = self.steps[self.current_step]
         print("Executing:", step)
-
         self.history.append("Completed: " + step)
 
         self.current_step += 1
