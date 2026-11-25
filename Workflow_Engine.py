@@ -51,7 +51,6 @@ class Workflow:
         for event in self.history:
             print("-", event)
 
-
 workflow = Workflow(
     "WF-1001",
     [
