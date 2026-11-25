@@ -61,7 +61,6 @@ workflow = Workflow(
         "Send Completion Event"
     ]
 )
-
 while True:
     print("\n1. Start Workflow")
     print("2. Execute Next Step")
