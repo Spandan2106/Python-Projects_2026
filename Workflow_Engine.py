@@ -26,7 +26,6 @@ class Workflow:
         if self.current_step == len(self.steps):
             self.status = "COMPLETED"
             self.history.append("Workflow completed")
-
             print("Workflow completed!")
 
     def fail(self, reason):
