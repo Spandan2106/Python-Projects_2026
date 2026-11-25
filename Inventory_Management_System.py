@@ -11,7 +11,6 @@ class Product:
               self.price, self.quantity)
 
 class Inventory:
-
     def __init__(self):
         self.products = {}
 
