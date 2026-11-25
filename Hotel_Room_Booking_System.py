@@ -28,7 +28,6 @@ class Hotel:
         if not room.available:
             print("Room already booked!")
             return
-
         self.booking_id += 1
         room.available = False
 
