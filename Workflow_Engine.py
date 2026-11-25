@@ -74,7 +74,6 @@ while True:
 
     if choice == "1":
         workflow.start()
-
     elif choice == "2":
         workflow.run_next_step()
     elif choice == "3":
