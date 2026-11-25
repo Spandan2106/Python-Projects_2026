@@ -1,6 +1,5 @@
 class Workflow:
     def __init__(self, workflow_id, steps):
-
         self.workflow_id = workflow_id
         self.steps = steps
         self.current_step = 0
