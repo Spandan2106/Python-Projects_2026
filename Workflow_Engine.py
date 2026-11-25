@@ -20,7 +20,6 @@ class Workflow:
             self.status = "COMPLETED"
             return
         step = self.steps[self.current_step]
-
         print("Executing:", step)
 
         self.history.append("Completed: " + step)
