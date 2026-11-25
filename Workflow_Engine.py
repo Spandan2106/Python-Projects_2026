@@ -71,7 +71,6 @@ while True:
     print("5. Exit")
 
     choice = input("Choice: ")
-
     if choice == "1":
         workflow.start()
     elif choice == "2":
