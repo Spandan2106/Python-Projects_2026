@@ -21,7 +21,6 @@ class Hotel:
                   room.price, status)
     def book_room(self, room_number, customer):
         room = self.rooms.get(room_number)
-
         if room is None:
             print("Room not found!")
             return
