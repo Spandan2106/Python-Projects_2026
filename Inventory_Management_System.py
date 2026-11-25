@@ -75,7 +75,6 @@ while True:
 
     elif choice == "3":
         inventory.search_product(input("Product ID: "))
-
     elif choice == "4":
         inventory.display_inventory()
     elif choice == "5":
