@@ -24,7 +24,6 @@ class Workflow:
         self.history.append("Completed: " + step)
         self.current_step += 1
         if self.current_step == len(self.steps):
-
             self.status = "COMPLETED"
 
             self.history.append("Workflow completed")
