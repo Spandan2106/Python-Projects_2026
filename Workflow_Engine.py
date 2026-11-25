@@ -77,7 +77,6 @@ while True:
 
     elif choice == "2":
         workflow.run_next_step()
-
     elif choice == "3":
         reason = input("Failure Reason: ")
         workflow.fail(reason)
