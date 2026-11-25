@@ -12,7 +12,6 @@ class Hotel:
             103: Room(103, "Deluxe", 3000),
             104: Room(104, "Single", 1000)
         }
-
         self.bookings = {}
         self.booking_id = 1000
 
