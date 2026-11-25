@@ -4,7 +4,6 @@ class Room:
         self.room_type = room_type
         self.price = price
         self.available = True
-
 class Hotel:
     def __init__(self):
         self.rooms = {
