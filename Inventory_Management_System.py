@@ -34,7 +34,6 @@ class Inventory:
     def display_inventory(self):
         for product in self.products.values():
             product.display()
-
     def total_value(self):
         total = sum(
             p.price * p.quantity
