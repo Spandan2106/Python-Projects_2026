@@ -12,7 +12,6 @@ class Workflow:
         self.status = "RUNNING"
         self.history.append("Workflow started")
         print("Workflow started!")
-
     def run_next_step(self):
 
         if self.status != "RUNNING":
