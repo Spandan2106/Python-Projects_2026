@@ -68,7 +68,6 @@ while True:
         pid = input("Product ID: ")
         quantity = int(input("Stock change (+/-): "))
         inventory.update_stock(pid, quantity)
-
     elif choice == "3":
         inventory.search_product(input("Product ID: "))
     elif choice == "4":
