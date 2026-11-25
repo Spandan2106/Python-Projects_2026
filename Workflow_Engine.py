@@ -45,7 +45,6 @@ class Workflow:
             "/",
             len(self.steps)
         )
-
         print("History:")
         for event in self.history:
             print("-", event)
