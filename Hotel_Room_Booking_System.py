@@ -54,7 +54,6 @@ class Hotel:
         for bid, booking in self.bookings.items():
             print(bid, booking)
 
-
 hotel = Hotel()
 while True:
     print("\n1. Display Rooms")
