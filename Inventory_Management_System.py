@@ -48,7 +48,6 @@ while True:
     print("4. Display Inventory")
     print("5. Total Inventory Value")
     print("6. Exit")
-
     choice = input("Enter choice: ")
 
     if choice == "1":
