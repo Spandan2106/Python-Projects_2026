@@ -40,7 +40,6 @@ class Hotel:
         if booking is None:
             print("Booking not found!")
             return
-
         self.rooms[booking["room"]].available = True
         print("Booking cancelled!")
     def show_bookings(self):
