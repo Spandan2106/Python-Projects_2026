@@ -5,7 +5,6 @@ class Workflow:
         self.current_step = 0
         self.status = "PENDING"
         self.history = []
-
     def start(self):
 
         if self.status != "PENDING":
