@@ -29,7 +29,6 @@ class Hotel:
             return
         self.booking_id += 1
         room.available = False
-
         self.bookings[self.booking_id] = {
             "room": room_number,
             "customer": customer
