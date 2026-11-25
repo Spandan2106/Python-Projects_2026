@@ -5,7 +5,6 @@ class Product:
         self.name = name
         self.price = price
         self.quantity = quantity
-
     def display(self):
         print(self.product_id, self.name,
               self.price, self.quantity)
