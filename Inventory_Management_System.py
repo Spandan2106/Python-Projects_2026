@@ -31,7 +31,6 @@ class Inventory:
             product.display()
         else:
             print("Product not found!")
-
     def display_inventory(self):
         for product in self.products.values():
             product.display()
