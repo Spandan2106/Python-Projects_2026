@@ -51,6 +51,5 @@ while True:
 
     elif choice == "4":
         logger.display_logs()
-
     elif choice == "5":
         break
