@@ -40,7 +40,6 @@ class Inventory:
             for p in self.products.values()
         )
         print("Total Inventory Value:", total)
-
 inventory = Inventory()
 
 while True:
