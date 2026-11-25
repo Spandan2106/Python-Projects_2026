@@ -19,7 +19,6 @@ class Hotel:
             status = "Available" if room.available else "Booked"
             print(room.room_number, room.room_type,
                   room.price, status)
-
     def book_room(self, room_number, customer):
         room = self.rooms.get(room_number)
 
