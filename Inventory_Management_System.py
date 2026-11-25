@@ -27,7 +27,6 @@ class Inventory:
         print("Stock updated!")
     def search_product(self, product_id):
         product = self.products.get(product_id)
-
         if product:
             product.display()
         else:
