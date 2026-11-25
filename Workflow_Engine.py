@@ -19,7 +19,6 @@ class Workflow:
         if self.current_step >= len(self.steps):
             self.status = "COMPLETED"
             return
-
         step = self.steps[self.current_step]
 
         print("Executing:", step)
