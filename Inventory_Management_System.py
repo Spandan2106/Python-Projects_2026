@@ -12,7 +12,6 @@ class Product:
 class Inventory:
     def __init__(self):
         self.products = {}
-
     def add_product(self, product):
         if product.product_id in self.products:
             print("Product already exists!")
