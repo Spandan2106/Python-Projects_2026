@@ -78,7 +78,6 @@ while True:
 
     elif choice == "4":
         inventory.display_inventory()
-
     elif choice == "5":
         inventory.total_value()
     elif choice == "6":
