@@ -10,7 +10,6 @@ class Product:
         print(self.product_id, self.name,
               self.price, self.quantity)
 
-
 class Inventory:
 
     def __init__(self):
