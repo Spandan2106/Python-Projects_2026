@@ -34,7 +34,6 @@ class Workflow:
         self.status = "FAILED"
         self.history.append("Failed: " + reason)
         print("Workflow failed!")
-
     def display(self):
 
         print("\nWorkflow ID:", self.workflow_id)
