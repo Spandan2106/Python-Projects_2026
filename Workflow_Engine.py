@@ -16,7 +16,6 @@ class Workflow:
         if self.status != "RUNNING":
             print("Workflow is not running!")
             return
-
         if self.current_step >= len(self.steps):
             self.status = "COMPLETED"
             return
