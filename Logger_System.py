@@ -48,7 +48,6 @@ while True:
             logger.warning(message)
         else:
             logger.error(message)
-
     elif choice == "4":
         logger.display_logs()
     elif choice == "5":
