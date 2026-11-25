@@ -27,7 +27,6 @@ class Workflow:
             self.status = "COMPLETED"
             self.history.append("Workflow completed")
             print("Workflow completed!")
-
     def fail(self, reason):
 
         if self.status != "RUNNING":
