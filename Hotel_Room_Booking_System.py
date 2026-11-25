@@ -34,7 +34,6 @@ class Hotel:
             "room": room_number,
             "customer": customer
         }
-
         print("Booking successful!")
         print("Booking ID:", self.booking_id)
 
