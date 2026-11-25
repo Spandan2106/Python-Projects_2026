@@ -84,6 +84,5 @@ while True:
 
     elif choice == "4":
         workflow.display()
-
     elif choice == "5":
         break
