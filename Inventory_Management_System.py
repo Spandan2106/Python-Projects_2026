@@ -14,7 +14,6 @@ class Inventory:
         if product.product_id in self.products:
             print("Product already exists!")
             return
-
         self.products[product.product_id] = product
         print("Product added!")
 
