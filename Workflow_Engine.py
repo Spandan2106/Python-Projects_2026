@@ -31,7 +31,6 @@ class Workflow:
         if self.status != "RUNNING":
             print("Workflow is not running!")
             return
-
         self.status = "FAILED"
         self.history.append("Failed: " + reason)
 
