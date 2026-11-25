@@ -81,7 +81,6 @@ while True:
     elif choice == "3":
         reason = input("Failure Reason: ")
         workflow.fail(reason)
-
     elif choice == "4":
         workflow.display()
     elif choice == "5":
