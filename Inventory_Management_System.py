@@ -16,7 +16,6 @@ class Inventory:
             return
         self.products[product.product_id] = product
         print("Product added!")
-
     def update_stock(self, product_id, quantity):
         if product_id not in self.products:
             print("Product not found!")
