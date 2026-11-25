@@ -14,7 +14,6 @@ class Hotel:
         }
         self.bookings = {}
         self.booking_id = 1000
-
     def display_rooms(self):
         for room in self.rooms.values():
             status = "Available" if room.available else "Booked"
