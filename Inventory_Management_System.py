@@ -49,7 +49,6 @@ while True:
     print("5. Total Inventory Value")
     print("6. Exit")
     choice = input("Enter choice: ")
-
     if choice == "1":
         pid = input("Product ID: ")
         name = input("Product Name: ")
