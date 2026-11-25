@@ -7,7 +7,6 @@ class Room:
 
 
 class Hotel:
-
     def __init__(self):
         self.rooms = {
             101: Room(101, "Single", 1000),
