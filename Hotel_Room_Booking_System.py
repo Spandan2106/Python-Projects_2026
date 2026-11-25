@@ -84,7 +84,6 @@ while True:
     elif choice == "3":
         bid = int(input("Booking ID: "))
         hotel.cancel_booking(bid)
-
     elif choice == "4":
         hotel.show_bookings()
     elif choice == "5":
