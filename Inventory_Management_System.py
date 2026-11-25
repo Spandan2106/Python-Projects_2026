@@ -81,6 +81,5 @@ while True:
 
     elif choice == "5":
         inventory.total_value()
-
     elif choice == "6":
         break
