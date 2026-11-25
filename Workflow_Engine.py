@@ -6,7 +6,6 @@ class Workflow:
         self.status = "PENDING"
         self.history = []
     def start(self):
-
         if self.status != "PENDING":
             print("Workflow already started!")
             return
