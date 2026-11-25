@@ -63,7 +63,6 @@ while True:
             inventory.add_product(
                 Product(pid, name, price, quantity)
             )
-
     elif choice == "2":
         pid = input("Product ID: ")
         quantity = int(input("Stock change (+/-): "))
