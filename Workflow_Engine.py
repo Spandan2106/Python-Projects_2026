@@ -23,7 +23,6 @@ class Workflow:
         print("Executing:", step)
         self.history.append("Completed: " + step)
         self.current_step += 1
-
         if self.current_step == len(self.steps):
 
             self.status = "COMPLETED"
