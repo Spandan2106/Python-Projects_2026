@@ -33,7 +33,6 @@ class Workflow:
             return
         self.status = "FAILED"
         self.history.append("Failed: " + reason)
-
         print("Workflow failed!")
 
     def display(self):
