@@ -17,7 +17,6 @@ class Hotel:
     def display_rooms(self):
         for room in self.rooms.values():
             status = "Available" if room.available else "Booked"
-
             print(room.room_number, room.room_type,
                   room.price, status)
 
