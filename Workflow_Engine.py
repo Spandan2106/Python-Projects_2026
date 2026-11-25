@@ -3,7 +3,6 @@ class Workflow:
         self.workflow_id = workflow_id
         self.steps = steps
         self.current_step = 0
-
         self.status = "PENDING"
         self.history = []
 
