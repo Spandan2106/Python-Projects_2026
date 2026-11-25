@@ -14,7 +14,6 @@ class Workflow:
         if self.status != "PENDING":
             print("Workflow already started!")
             return
-
         self.status = "RUNNING"
         self.history.append("Workflow started")
 
