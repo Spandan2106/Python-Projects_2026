@@ -37,7 +37,6 @@ class Hotel:
         print("Booking ID:", self.booking_id)
     def cancel_booking(self, booking_id):
         booking = self.bookings.pop(booking_id, None)
-
         if booking is None:
             print("Booking not found!")
             return
