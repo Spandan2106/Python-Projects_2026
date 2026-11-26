@@ -31,7 +31,6 @@ class Autocomplete:
                 collect(node.children[char], word + char)
         collect(current, prefix)
         return results[:10]
-
 autocomplete = Autocomplete()
 words = [
     "python", "pytorch", "programming",
