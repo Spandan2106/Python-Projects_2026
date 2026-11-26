@@ -42,6 +42,5 @@ def main():
   use_symbols = ask_yes_no("Include symbols? (y/n): ")
   password = generate_password(length, use_upper, use_digits, use_symbols)
   print(f"\nGenerated Password: {password}")
-
 if __name__ == "__main__":
   main()
