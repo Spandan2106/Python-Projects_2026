@@ -29,7 +29,6 @@ def build():
         emp[i].exp = int(input("Experience: "))
         emp[i].age = int(input("Age: "))
     showMenu()
-
 # Function to insert the data into
 # given data type
 def insert():
