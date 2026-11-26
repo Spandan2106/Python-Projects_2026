@@ -47,7 +47,6 @@ def insert():
         emp[i].age = int(input("Age: "))
     else:
         print("Employee Table Full")
-
     showMenu()
 
 # Function to delete record at index i
