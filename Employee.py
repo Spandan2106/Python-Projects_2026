@@ -1,5 +1,4 @@
 max = 20
-
 # Structure of Employee
 class employee:
     def __init__(self):
