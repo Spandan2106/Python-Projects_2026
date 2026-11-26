@@ -66,7 +66,6 @@ def deleteRecord():
     showMenu()
 def searchRecord():
     global num, emp
-
     code = int(input("Enter the Employee ID to Search Record: "))
 
     for i in range(num):
