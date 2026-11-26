@@ -67,7 +67,6 @@ if __name__ == "__main__":
     print("\n--- Client B attempts to acquire the same lock immediately ---")
     success_b, _, msg_b = dlm.acquire_lock(resource, client_b, ttl_seconds=2)
     print(f"Result: {msg_b}")
-
     print("\n--- Waiting for Client A's lock lease to expire (2.5s)... ---")
     time.sleep(2.5)
     print("--- Client B attempts to acquire lock after expiration ---")
