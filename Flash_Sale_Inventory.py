@@ -18,8 +18,7 @@ class FlashSaleInventory:
                 self.inventory[item_id] -= quantity
                 if item_id not in self.reservations:
                     self.reservations[item_id] = []
-                self.reservations[item_id].append({"user_id": user_id, "qty": quantity})
-                
+                self.reservations[item_id].append({"user_id": user_id, "qty": quantity})              
                 return True, f"Successfully reserved {quantity} unit(s) of '{item_id}'."
             else:
                 return False, f"Out of stock! Requested {quantity}, available {self.inventory[item_id]}."
