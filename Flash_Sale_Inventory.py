@@ -7,7 +7,6 @@ class FlashSaleInventory:
         self.inventory = stock_map
         self.locks = {item_id: threading.Lock() for item_id in stock_map}
         self.reservations = {}
-
     def reserve_item(self, user_id, item_id, quantity=1):
         if item_id not in self.inventory:
             return False, "Item does not exist."
