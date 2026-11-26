@@ -12,7 +12,6 @@ emp = [employee() for i in range(max)]
 tempemp = [employee() for i in range(max)]
 sortemp = [employee() for i in range(max)]
 sortemp1 = [employee() for i in range(max)]
-
 # Function to build the given datatype
 def build():
     global num, emp
