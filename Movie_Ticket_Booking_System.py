@@ -26,7 +26,6 @@ class Movie:
 
 
 movie = Movie("Avengers", 10)
-
 while True:
     print("\n1. Display Seats")
     print("2. Book Seat")
