@@ -28,7 +28,6 @@ class TaskScheduler:
             heapq.heappush(self.task_queue, task)
             self.condition.notify()
         print(f"[{datetime.now().strftime('%H:%M:%S')}] Task '{task_id}' (Priority: {priority}) submitted.")
-
     def _worker_loop(self, worker_id):
         while self.running:
             task = None
