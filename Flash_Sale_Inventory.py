@@ -44,7 +44,6 @@ if __name__ == "__main__":
 
     threads = []
     total_users = 30  # 30 concurrent users trying to buy only 10 items
-
     print(f"Starting Flash Sale simulation with {total_users} users for 10 items...")
     start_time = time.time()
     for i in range(1, total_users + 1):
