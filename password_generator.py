@@ -19,7 +19,6 @@ def generate_password(length, use_upper, use_digits, use_symbols):
   chars = required + remaining
   secrets.SystemRandom().shuffle(chars)
   return "".join(chars)
-
 def ask_yes_no(prompt):
   while True:
     ans = input(prompt).strip().lower()
