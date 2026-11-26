@@ -109,7 +109,6 @@ def showMenu():
     print("Delete Entry        (3)")
     print("Search a Record     (4)")
     print("Exit                (5)")
-
     # Input Options
     option = int(input())
     # Call
