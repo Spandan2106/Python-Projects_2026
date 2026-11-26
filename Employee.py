@@ -76,7 +76,6 @@ def searchRecord():
             print("Experience:", emp[i].exp)
             print("Age:", emp[i].age)
             break
-
     showMenu()
 # Function to show menu
 def showMenu():
