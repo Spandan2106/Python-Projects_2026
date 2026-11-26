@@ -1,7 +1,6 @@
 import threading
 import time
 import random
-
 class FlashSaleInventory:
     def __init__(self, stock_map):
         # item_id -> available_quantity
