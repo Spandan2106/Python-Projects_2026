@@ -36,7 +36,6 @@ class TaskScheduler:
                 if not self.task_queue:
                     continue
                 task = heapq.heappop(self.task_queue)
-
             if task:
                 try:
                     print(f"[Worker-{worker_id}] Executing Task '{task.task_id}'...")
