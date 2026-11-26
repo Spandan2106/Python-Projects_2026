@@ -42,7 +42,6 @@ while True:
         seat = int(input("Enter seat number: "))
         customer = input("Customer name: ")
         movie.book_seat(seat, customer)
-
     elif choice == "3":
         seat = int(input("Enter seat number: "))
         movie.cancel_booking(seat)
