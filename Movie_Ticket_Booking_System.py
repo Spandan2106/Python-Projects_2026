@@ -20,7 +20,6 @@ class Movie:
             print("Booking cancelled!")
         else:
             print("No booking found!")
-
 movie = Movie("Avengers", 10)
 while True:
     print("\n1. Display Seats")
