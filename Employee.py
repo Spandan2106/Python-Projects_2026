@@ -98,7 +98,6 @@ def searchRecord():
             break
 
     showMenu()
-
 # Function to show menu
 def showMenu():
     print("-------------------------GeeksforGeeks Employee Management System-------------------------\n")
