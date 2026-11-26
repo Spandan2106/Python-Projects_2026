@@ -70,7 +70,6 @@ if __name__ == "__main__":
 
     print("\n--- Waiting for Client A's lock lease to expire (2.5s)... ---")
     time.sleep(2.5)
-
     print("--- Client B attempts to acquire lock after expiration ---")
     success_b, token_b, msg_b = dlm.acquire_lock(resource, client_b, ttl_seconds=2)
     print(f"Result: {msg_b} | Fencing Token: {token_b}")
