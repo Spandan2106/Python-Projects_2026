@@ -59,7 +59,6 @@ if __name__ == "__main__":
     client_a = "worker_node_1"
     client_b = "worker_node_2"
     resource = "database_migration_lock"
-
     print("--- Client A attempts to acquire lock ---")
     success, token_a, msg = dlm.acquire_lock(resource, client_a, ttl_seconds=2)
     print(f"Result: {msg} | Fencing Token: {token_a}")
