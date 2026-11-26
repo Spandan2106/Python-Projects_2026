@@ -21,7 +21,6 @@ class TaskScheduler:
         self.num_workers = num_workers
         self.running = True
         self.workers = []
-
     def submit_task(self, task_id, priority, func, args=(), max_retries=3):
         task = Task(task_id, priority, func, args, max_retries)
         with self.condition:
