@@ -13,7 +13,6 @@ class Task:
         self.retries = 0
     def __lt__(self, other):
         return self.priority < other.priority
-
 class TaskScheduler:
     def __init__(self, num_workers=3):
         self.task_queue = []
