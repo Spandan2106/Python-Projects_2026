@@ -10,7 +10,6 @@ class FlashSaleInventory:
     def reserve_item(self, user_id, item_id, quantity=1):
         if item_id not in self.inventory:
             return False, "Item does not exist."
-
         # Acquire lock specific to the item to handle concurrent purchases
         with self.locks[item_id]:
             if self.inventory[item_id] >= quantity:
