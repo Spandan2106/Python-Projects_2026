@@ -20,7 +20,6 @@ def build():
     print("Maximum Entries can be", max)
 
     num = int(input("Enter the number of Entries required: "))
-
     if num > max:
         print("Maximum number of Entries are 20")
         num = 20
