@@ -48,7 +48,6 @@ def insert():
 # Function to delete record at index i
 def deleteIndex(i):
     global num, emp
-
     for j in range(i, num - 1):
         emp[j].name = emp[j + 1].name
         emp[j].code = emp[j + 1].code
