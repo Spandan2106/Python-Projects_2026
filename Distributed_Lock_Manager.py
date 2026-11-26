@@ -9,8 +9,7 @@ class DistributedLockManager:
 
     def acquire_lock(self, resource_id, client_id, ttl_seconds=5):
         with self.global_lock:
-            now = time.time()
-            
+            now = time.time()            
             # Check if lock exists and is expired
             if resource_id in self.locks:
                 lock_info = self.locks[resource_id]
