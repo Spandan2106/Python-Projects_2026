@@ -1,6 +1,5 @@
 import secrets
 import string
-
 def generate_password(length, use_upper, use_digits, use_symbols):
   pool = string.ascii_lowercase
   required = [secrets.choice(string.ascii_lowercase)]
