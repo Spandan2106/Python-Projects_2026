@@ -41,7 +41,6 @@ if __name__ == "__main__":
     # Initialize flash sale with 10 units of "LIMITED_EDITION_PHONE"
     sale_system = FlashSaleInventory({"LIMITED_EDITION_PHONE": 10})
     simulator = FlashSaleClientSimulator(sale_system, "LIMITED_EDITION_PHONE")
-
     threads = []
     total_users = 30  # 30 concurrent users trying to buy only 10 items
     print(f"Starting Flash Sale simulation with {total_users} users for 10 items...")
