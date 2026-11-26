@@ -1,7 +1,6 @@
 import time
 import threading
 import uuid
-
 class DistributedLockManager:
     def __init__(self):
         self.locks = {}  # resource_id -> dict (lock metadata)
