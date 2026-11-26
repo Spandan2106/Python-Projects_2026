@@ -7,7 +7,6 @@ class employee:
         self.designation = ''
         self.exp = 0
         self.age = 0
-
 num = 0
 emp = [employee() for i in range(max)]
 tempemp = [employee() for i in range(max)]
