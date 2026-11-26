@@ -34,7 +34,6 @@ while True:
     print("4. Exit")
 
     choice = input("Enter choice: ")
-
     if choice == "1":
         movie.display_seats()
     elif choice == "2":
