@@ -37,7 +37,6 @@ def main():
   except ValueError:
     print("Invalid number. Using length 12.")
     length = 12
-
   use_upper = ask_yes_no("Include uppercase letters? (y/n): ")
   use_digits = ask_yes_no("Include digits? (y/n): ")
   use_symbols = ask_yes_no("Include symbols? (y/n): ")
