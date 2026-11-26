@@ -63,7 +63,6 @@ def deleteRecord():
             deleteIndex(i)
             num -= 1
             break
-
     showMenu()
 
 def searchRecord():
