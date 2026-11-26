@@ -6,7 +6,6 @@ class TrieNode:
 class Autocomplete:
     def __init__(self):
         self.root = TrieNode()
-
     def add_word(self, word):
         current = self.root
         for char in word.lower():
