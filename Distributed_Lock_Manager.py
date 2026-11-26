@@ -35,7 +35,6 @@ class DistributedLockManager:
             if lock_info["client_id"] == client_id:
                 lock_info["expires_at"] = now + ttl_seconds  # Refresh TTL
                 return True, lock_info["fencing_token"], "Lock refreshed (reentrant)."
-
             return False, 0, f"Lock currently held by another client."
     def release_lock(self, resource_id, client_id, fencing_token):
         with self.global_lock:
