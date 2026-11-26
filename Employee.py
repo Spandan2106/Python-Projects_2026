@@ -35,7 +35,6 @@ def build():
 # given data type
 def insert():
     global num, emp
-
     if num < max:
         i = num
         num += 1
