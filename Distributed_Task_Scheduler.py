@@ -64,7 +64,6 @@ class TaskScheduler:
             worker = threading.Thread(target=self._worker_loop, args=(i + 1,), daemon=True)
             self.workers.append(worker)
             worker.start()
-
     def shutdown(self):
         self.running = False
         with self.condition:
