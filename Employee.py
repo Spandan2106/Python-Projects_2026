@@ -47,7 +47,6 @@ def insert():
     else:
         print("Employee Table Full")
     showMenu()
-
 # Function to delete record at index i
 def deleteIndex(i):
     global num, emp
