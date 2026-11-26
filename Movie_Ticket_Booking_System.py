@@ -37,7 +37,6 @@ while True:
 
     if choice == "1":
         movie.display_seats()
-
     elif choice == "2":
         seat = int(input("Enter seat number: "))
         customer = input("Customer name: ")
