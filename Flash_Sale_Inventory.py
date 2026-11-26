@@ -16,7 +16,6 @@ class FlashSaleInventory:
                 # Simulate database processing latency
                 time.sleep(0.01)
                 self.inventory[item_id] -= quantity
-                
                 if item_id not in self.reservations:
                     self.reservations[item_id] = []
                 self.reservations[item_id].append({"user_id": user_id, "qty": quantity})
