@@ -21,8 +21,7 @@ class DistributedLockManager:
             # Acquire lock if available
             if resource_id not in self.locks:
                 fencing_token = self.locks.get(f"{resource_id}_counter", 0) + 1
-                self.locks[f"{resource_id}_counter"] = fencing_token
-                
+                self.locks[f"{resource_id}_counter"] = fencing_token 
                 self.locks[resource_id] = {
                     "client_id": client_id,
                     "expires_at": now + ttl_seconds,
