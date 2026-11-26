@@ -6,7 +6,6 @@ class DistributedLockManager:
     def __init__(self):
         self.locks = {}  # resource_id -> dict (lock metadata)
         self.global_lock = threading.Lock()
-
     def acquire_lock(self, resource_id, client_id, ttl_seconds=5):
         with self.global_lock:
             now = time.time()            
