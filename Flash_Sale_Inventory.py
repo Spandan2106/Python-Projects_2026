@@ -30,7 +30,6 @@ class FlashSaleClientSimulator:
     def __init__(self, system, item_id):
         self.system = system
         self.item_id = item_id
-
     def simulate_user_purchase(self, user_id):
         success, message = self.system.reserve_item(user_id, self.item_id, quantity=1)
    
