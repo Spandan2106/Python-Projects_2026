@@ -11,7 +11,6 @@ class Task:
         self.args = args
         self.max_retries = max_retries
         self.retries = 0
-
     def __lt__(self, other):
         return self.priority < other.priority
 
