@@ -39,7 +39,6 @@ def insert():
     if num < max:
         i = num
         num += 1
-
         print("Enter the information of the Employee:")
         emp[i].name = input("Name: ")
         emp[i].code = int(input("Employee ID: "))
