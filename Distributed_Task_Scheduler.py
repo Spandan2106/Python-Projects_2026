@@ -3,7 +3,6 @@ import heapq
 import threading
 import random
 from datetime import datetime
-
 class Task:
     def __init__(self, task_id, priority, func, args=(), max_retries=3):
         self.task_id = task_id
