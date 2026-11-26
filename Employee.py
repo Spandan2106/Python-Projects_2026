@@ -24,7 +24,6 @@ def build():
     if num > max:
         print("Maximum number of Entries are 20")
         num = 20
-
     print("Enter the following data:")
     for i in range(num):
         emp[i].name = input("Name: ")
