@@ -32,7 +32,6 @@ while True:
     print("2. Book Seat")
     print("3. Cancel Booking")
     print("4. Exit")
-
     choice = input("Enter choice: ")
     if choice == "1":
         movie.display_seats()
