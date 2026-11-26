@@ -64,7 +64,6 @@ def deleteRecord():
             num -= 1
             break
     showMenu()
-
 def searchRecord():
     global num, emp
 
