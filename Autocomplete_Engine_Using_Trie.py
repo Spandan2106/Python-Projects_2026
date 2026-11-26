@@ -40,7 +40,6 @@ words = [
     "program", "project", "java",
     "javascript", "json", "database"
 ]
-
 for word in words:
     autocomplete.add_word(word)
 while True:
