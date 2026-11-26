@@ -22,7 +22,6 @@ class Autocomplete:
                 return []
             current = current.children[char]
         results = []
-
         def collect(node, word):
             if node.is_word:
                 results.append(word)
