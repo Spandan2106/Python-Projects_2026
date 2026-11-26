@@ -28,7 +28,6 @@ def build():
         emp[i].designation = input("Designation: ")
         emp[i].exp = int(input("Experience: "))
         emp[i].age = int(input("Age: "))
-
     showMenu()
 
 # Function to insert the data into
