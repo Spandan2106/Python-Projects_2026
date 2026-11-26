@@ -22,7 +22,6 @@ class FlashSaleInventory:
                 return True, f"Successfully reserved {quantity} unit(s) of '{item_id}'."
             else:
                 return False, f"Out of stock! Requested {quantity}, available {self.inventory[item_id]}."
-
 class FlashSaleClientSimulator:
     def __init__(self, system, item_id):
         self.system = system
