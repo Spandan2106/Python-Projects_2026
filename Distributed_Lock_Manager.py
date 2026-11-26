@@ -49,7 +49,6 @@ class DistributedLockManager:
             
             if lock_info["fencing_token"] != fencing_token:
                 return False, "Fencing token mismatch (stale token)."
-
             del self.locks[resource_id]
             return True, "Lock released successfully."
 # --- Example Usage ---
