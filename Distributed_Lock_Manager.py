@@ -45,8 +45,7 @@ class DistributedLockManager:
             
             lock_info = self.locks[resource_id]
             if lock_info["client_id"] != client_id:
-                return False, "Unauthorized release: Client does not own the lock."
-            
+                return False, "Unauthorized release: Client does not own the lock."   
             if lock_info["fencing_token"] != fencing_token:
                 return False, "Fencing token mismatch (stale token)."
             del self.locks[resource_id]
