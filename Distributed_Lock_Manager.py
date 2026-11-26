@@ -52,7 +52,6 @@ class DistributedLockManager:
 
             del self.locks[resource_id]
             return True, "Lock released successfully."
-
 # --- Example Usage ---
 if __name__ == "__main__":
     dlm = DistributedLockManager()
