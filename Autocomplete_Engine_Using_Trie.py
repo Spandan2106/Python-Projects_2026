@@ -47,7 +47,6 @@ for word in words:
 while True:
 
     prefix = input("\nEnter prefix (exit to stop): ")
-
     if prefix.lower() == "exit":
         break
     print("Suggestions:", autocomplete.search(prefix))
