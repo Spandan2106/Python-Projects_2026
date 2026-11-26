@@ -67,7 +67,6 @@ def deleteIndex(i):
         emp[j].designation = emp[j + 1].designation
         emp[j].exp = emp[j + 1].exp
         emp[j].age = emp[j + 1].age
-
 # Function to delete record
 def deleteRecord():
     global num, emp
