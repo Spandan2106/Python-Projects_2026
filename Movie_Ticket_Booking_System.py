@@ -7,7 +7,6 @@ class Movie:
         for seat, customer in self.seats.items():
             status = "Available" if customer is None else "Booked"
             print(seat, "-", status)
-
     def book_seat(self, seat, customer):
         if seat not in self.seats:
             print("Invalid seat!")
