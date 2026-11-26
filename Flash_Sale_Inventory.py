@@ -52,7 +52,6 @@ if __name__ == "__main__":
         t = threading.Thread(target=simulator.simulate_user_purchase, args=(f"User_{i}",))
         threads.append(t)
         t.start()
-
     for t in threads:
         t.join()
     print(f"\n--- Flash Sale Completed in {time.time() - start_time:.4f}s ---")
