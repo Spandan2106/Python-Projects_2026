@@ -74,7 +74,6 @@ if __name__ == "__main__":
     print("--- Client B attempts to acquire lock after expiration ---")
     success_b, token_b, msg_b = dlm.acquire_lock(resource, client_b, ttl_seconds=2)
     print(f"Result: {msg_b} | Fencing Token: {token_b}")
-
     print("\n--- Client B releases the lock ---")
     released, rel_msg = dlm.release_lock(resource, client_b, token_b)
     print(f"Result: {rel_msg}")
