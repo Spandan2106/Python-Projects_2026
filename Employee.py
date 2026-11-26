@@ -15,7 +15,6 @@ sortemp1 = [employee() for i in range(max)]
 # Function to build the given datatype
 def build():
     global num, emp
-
     print("Build The Table")
     print("Maximum Entries can be", max)
 
