@@ -43,7 +43,6 @@ words = [
 
 for word in words:
     autocomplete.add_word(word)
-
 while True:
     prefix = input("\nEnter prefix (exit to stop): ")
     if prefix.lower() == "exit":
