@@ -47,7 +47,6 @@ if __name__ == "__main__":
 
     print(f"Starting Flash Sale simulation with {total_users} users for 10 items...")
     start_time = time.time()
-
     for i in range(1, total_users + 1):
         t = threading.Thread(target=simulator.simulate_user_purchase, args=(f"User_{i}",))
         threads.append(t)
