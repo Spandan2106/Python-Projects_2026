@@ -41,8 +41,7 @@ class DistributedLockManager:
     def release_lock(self, resource_id, client_id, fencing_token):
         with self.global_lock:
             if resource_id not in self.locks:
-                return False, "Lock does not exist or already expired."
-            
+                return False, "Lock does not exist or already expired."            
             lock_info = self.locks[resource_id]
             if lock_info["client_id"] != client_id:
                 return False, "Unauthorized release: Client does not own the lock."   
