@@ -14,7 +14,6 @@ class Movie:
         else:
             self.seats[seat] = customer
             print("Booking successful!")
-
     def cancel_booking(self, seat):
         if seat in self.seats and self.seats[seat] is not None:
             self.seats[seat] = None
