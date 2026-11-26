@@ -16,7 +16,6 @@ class DistributedLockManager:
                 if lock_info["expires_at"] < now:
                     # Expired, clean it up
                     del self.locks[resource_id]
-
             # Acquire lock if available
             if resource_id not in self.locks:
                 fencing_token = self.locks.get(f"{resource_id}_counter", 0) + 1
