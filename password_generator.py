@@ -29,7 +29,6 @@ def ask_yes_no(prompt):
     if ans in ("n", "no"):
       return False
     print("Enter y or n.")
-
 def main():
   print("Password Generator")
   try:
