@@ -32,7 +32,6 @@ class Autocomplete:
         collect(current, prefix)
         return results[:10]
 
-
 autocomplete = Autocomplete()
 words = [
     "python", "pytorch", "programming",
