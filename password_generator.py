@@ -13,7 +13,6 @@ def generate_password(length, use_upper, use_digits, use_symbols):
     symbols = "!@#$%^&*()-_=+"
     pool += symbols
     required.append(secrets.choice(symbols))
-
   if length < len(required):
     length = len(required)
 
