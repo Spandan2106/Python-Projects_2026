@@ -14,7 +14,6 @@ class Autocomplete:
                 current.children[char] = TrieNode()
             current = current.children[char]
         current.is_word = True
-
     def search(self, prefix):
         current = self.root
         prefix = prefix.lower()
