@@ -55,7 +55,6 @@ if __name__ == "__main__":
 
     for t in threads:
         t.join()
-
     print(f"\n--- Flash Sale Completed in {time.time() - start_time:.4f}s ---")
     print(f"Remaining Inventory: {sale_system.inventory}")
     print(f"Total Successful Orders: {len(sale_system.reservations.get('LIMITED_EDITION_PHONE', []))}")
