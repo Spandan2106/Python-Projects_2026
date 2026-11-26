@@ -34,7 +34,6 @@ class Autocomplete:
 
 
 autocomplete = Autocomplete()
-
 words = [
     "python", "pytorch", "programming",
     "program", "project", "java",
