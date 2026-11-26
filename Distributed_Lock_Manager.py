@@ -29,7 +29,6 @@ class DistributedLockManager:
                     "fencing_token": fencing_token
                 }
                 return True, fencing_token, "Lock acquired successfully."
-            
             # Allow reentrant acquisition by the same client
             lock_info = self.locks[resource_id]
             if lock_info["client_id"] == client_id:
