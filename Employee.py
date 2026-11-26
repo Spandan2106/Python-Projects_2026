@@ -58,7 +58,6 @@ def deleteIndex(i):
 def deleteRecord():
     global num, emp
     code = int(input("Enter the Employee ID to Delete Record: "))
-
     for i in range(num):
         if emp[i].code == code:
             deleteIndex(i)
