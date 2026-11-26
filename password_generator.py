@@ -15,7 +15,6 @@ def generate_password(length, use_upper, use_digits, use_symbols):
     required.append(secrets.choice(symbols))
   if length < len(required):
     length = len(required)
-
   remaining = [secrets.choice(pool) for _ in range(length - len(required))]
   chars = required + remaining
   secrets.SystemRandom().shuffle(chars)
