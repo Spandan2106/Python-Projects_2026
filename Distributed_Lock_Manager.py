@@ -37,7 +37,6 @@ class DistributedLockManager:
                 return True, lock_info["fencing_token"], "Lock refreshed (reentrant)."
 
             return False, 0, f"Lock currently held by another client."
-
     def release_lock(self, resource_id, client_id, fencing_token):
         with self.global_lock:
             if resource_id not in self.locks:
