@@ -2,7 +2,6 @@ class Movie:
     def __init__(self, name, total_seats):
         self.name = name
         self.seats = {i: None for i in range(1, total_seats + 1)}
-
     def display_seats(self):
         for seat, customer in self.seats.items():
             status = "Available" if customer is None else "Booked"
