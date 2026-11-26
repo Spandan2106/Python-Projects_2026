@@ -30,7 +30,6 @@ def ask_yes_no(prompt):
       return False
     print("Enter y or n.")
 
-
 def main():
   print("Password Generator")
   try:
