@@ -69,7 +69,6 @@ while True:
     print("5. Check Balance")
     print("6. Transaction History")
     print("7. Exit")
-
     choice = input("Enter choice: ")
     if choice == "1":
         acc = input("Account number: ")
