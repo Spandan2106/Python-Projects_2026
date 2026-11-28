@@ -91,7 +91,6 @@ while True:
             bank.accounts[acc].deposit(amount)
         else:
             bank.accounts[acc].withdraw(amount)
-
     elif choice == "4":
         sender = input("Sender account: ")
         receiver = input("Receiver account: ")
