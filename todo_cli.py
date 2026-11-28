@@ -75,7 +75,6 @@ def main():
     print("3. Toggle task status")
     print("4. Delete task")
     print("5. Exit")
-
     choice = input("Choose an option (1-5): ").strip()
     if choice == "1":
       show_tasks(tasks)
