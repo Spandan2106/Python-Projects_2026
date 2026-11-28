@@ -3,7 +3,6 @@ class CircuitBreaker:
     CLOSED = "CLOSED"
     OPEN = "OPEN"
     HALF_OPEN = "HALF_OPEN"
-
     def __init__(self, threshold=3, timeout=5):
         self.threshold = threshold
         self.timeout = timeout
