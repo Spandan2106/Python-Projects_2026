@@ -34,7 +34,6 @@ class ChatServer:
 
 
 server = ChatServer()
-
 while True:
     print("\n1. Register User")
     print("2. Send Message")
