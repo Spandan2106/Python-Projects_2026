@@ -39,7 +39,6 @@ class CircuitBreaker:
     def status(self):
         print("Current State:", self.state)
         print("Failures:", self.failure_count)
-
 breaker = CircuitBreaker()
 while True:
     print("\n1. Simulate Success")
