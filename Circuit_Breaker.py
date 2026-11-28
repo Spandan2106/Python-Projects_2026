@@ -35,7 +35,6 @@ class CircuitBreaker:
                 self.opened_at = time.time()
 
                 print("Circuit OPENED!")
-
     def status(self):
         print("Current State:", self.state)
         print("Failures:", self.failure_count)
