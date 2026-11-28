@@ -33,6 +33,5 @@ def play_game():
 
   print(f"\nGame over! The secret number was {secret_number}.")
 
-
 if __name__ == "__main__":
   play_game()
