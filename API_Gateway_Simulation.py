@@ -17,7 +17,6 @@ class APIGateway:
         self.api_keys.add(key)
     def register_service(self, method, prefix, service):
         self.routes[(method.upper(), prefix)] = service
-
     def dispatch(self, key, method, path, data=None):
 
         if key not in self.api_keys:
