@@ -71,7 +71,6 @@ while True:
     print("7. Exit")
 
     choice = input("Enter choice: ")
-
     if choice == "1":
         acc = input("Account number: ")
         name = input("Name: ")
