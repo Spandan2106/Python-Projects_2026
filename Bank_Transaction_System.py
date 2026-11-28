@@ -44,7 +44,6 @@ class Bank:
         if sender not in self.accounts or receiver not in self.accounts:
             print("Account not found!")
             return
-
         if amount <= 0:
             print("Invalid amount!")
             return
