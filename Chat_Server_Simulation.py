@@ -6,7 +6,6 @@ class ChatServer:
 
     def __init__(self):
         self.users = {}
-
     def register_user(self, username):
         if username in self.users:
             print("User already exists!")
