@@ -40,7 +40,6 @@ class Bank:
                 account_no, name, balance
             )
             print("Account created!")
-
     def transfer(self, sender, receiver, amount):
         if sender not in self.accounts or receiver not in self.accounts:
             print("Account not found!")
