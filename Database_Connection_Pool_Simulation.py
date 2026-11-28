@@ -36,7 +36,6 @@ class ConnectionPool:
             return
         connection.in_use = False
         print("Connection released!")
-
     def status(self):
         for connection in self.connections:
             print(
