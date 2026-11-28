@@ -54,7 +54,6 @@ def delete_task(tasks):
   except ValueError:
     print("Please enter a valid number.")
 
-
 def main():
   tasks = load_tasks()
   while True:
