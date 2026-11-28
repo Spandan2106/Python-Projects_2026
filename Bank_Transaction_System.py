@@ -86,7 +86,6 @@ while True:
             continue
 
         amount = float(input("Amount: "))
-
         if choice == "2":
             bank.accounts[acc].deposit(amount)
         else:
