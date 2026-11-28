@@ -10,7 +10,6 @@ class CircuitBreaker:
         self.state = self.CLOSED
         self.opened_at = None
     def call(self, success):
-
         if self.state == self.OPEN:
             if time.time() - self.opened_at >= self.timeout:
                 self.state = self.HALF_OPEN
