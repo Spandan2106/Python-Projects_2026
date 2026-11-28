@@ -1,6 +1,5 @@
 import time
 class CircuitBreaker:
-
     CLOSED = "CLOSED"
     OPEN = "OPEN"
     HALF_OPEN = "HALF_OPEN"
