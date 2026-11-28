@@ -2,7 +2,6 @@ class FakeConnection:
     def __init__(self, connection_id):
         self.connection_id = connection_id
         self.in_use = False
-
     def execute(self, query):
         print("Executing:", query)
 
