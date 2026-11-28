@@ -23,7 +23,6 @@ def play_game():
             f"Correct! You guessed the number in {attempts} attempt(s)."
         )
         return
-
       remaining = max_attempts - attempts
       if remaining > 0:
         print(f"Attempts left: {remaining}")
