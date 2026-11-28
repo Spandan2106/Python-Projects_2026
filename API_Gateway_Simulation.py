@@ -24,7 +24,6 @@ class APIGateway:
                 "error": "Unauthorized"
             }
         for (registered_method, prefix), service in self.routes.items():
-
             if (
                 method.upper() == registered_method
                 and path.startswith(prefix)
