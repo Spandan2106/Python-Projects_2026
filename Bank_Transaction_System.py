@@ -84,7 +84,6 @@ while True:
         if acc not in bank.accounts:
             print("Account not found!")
             continue
-
         amount = float(input("Amount: "))
         if choice == "2":
             bank.accounts[acc].deposit(amount)
