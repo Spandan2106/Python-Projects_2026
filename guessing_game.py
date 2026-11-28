@@ -1,5 +1,4 @@
 import random
-
 def play_game():
   secret_number = random.randint(1, 50)
   attempts = 0
