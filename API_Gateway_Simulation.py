@@ -46,7 +46,6 @@ while True:
     print("2. Exit")
     choice = input("Choice: ")
     if choice == "1":
-
         key = input("API Key: ")
         method = input("Method: ")
         path = input("Path: ")
