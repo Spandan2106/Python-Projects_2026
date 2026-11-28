@@ -113,6 +113,5 @@ while True:
             bank.accounts[acc].show_history()
         else:
             print("Account not found!")
-
     elif choice == "7":
         break
