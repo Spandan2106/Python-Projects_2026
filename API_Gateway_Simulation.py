@@ -9,7 +9,6 @@ class Service:
             "data": data,
             "status": 200
         }
-
 class APIGateway:
     def __init__(self):
         self.routes = {}
