@@ -2,7 +2,6 @@ class Service:
     def __init__(self, name):
         self.name = name
     def handle(self, method, path, data):
-
         return {
             "service": self.name,
             "method": method,
