@@ -11,7 +11,6 @@ class BankAccount:
         self.balance += amount
         self.history.append("Deposited: " + str(amount))
         print("Deposit successful!")
-
     def withdraw(self, amount):
         if amount <= 0:
             print("Invalid amount!")
