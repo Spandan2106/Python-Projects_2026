@@ -49,7 +49,6 @@ while True:
     print("3. Show Status")
     print("4. Exit")
     choice = input("Choice: ")
-
     if choice == "1":
         breaker.call(True)
     elif choice == "2":
