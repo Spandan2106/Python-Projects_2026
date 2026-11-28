@@ -19,7 +19,6 @@ class CircuitBreaker:
                 return
         if success:
             print("Service call successful!")
-
             self.failure_count = 0
             self.state = self.CLOSED
             self.opened_at = None
