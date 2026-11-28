@@ -38,7 +38,6 @@ class ConnectionPool:
         print("Connection released!")
 
     def status(self):
-
         for connection in self.connections:
             print(
                 connection.connection_id,
