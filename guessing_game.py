@@ -9,7 +9,6 @@ def play_game():
     try:
       guess = int(input("\nEnter your guess: "))
       attempts += 1
-
       if guess < secret_number:
         print("Too low! Try a higher number.")
       elif guess > secret_number:
