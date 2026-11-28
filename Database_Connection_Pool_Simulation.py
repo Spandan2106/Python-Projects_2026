@@ -47,7 +47,6 @@ class ConnectionPool:
 
 pool = ConnectionPool(2)
 leased = {}
-
 while True:
     print("\n1. Acquire")
     print("2. Execute Query")
