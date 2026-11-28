@@ -1,7 +1,6 @@
 import json
 from pathlib import Path
 DATA_FILE = Path("tasks.json")
-
 def load_tasks():
   if not DATA_FILE.exists():
     return []
