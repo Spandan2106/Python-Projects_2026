@@ -105,7 +105,6 @@ while True:
             bank.accounts[acc].display()
         else:
             print("Account not found!")
-
     elif choice == "6":
         acc = input("Account number: ")
         if acc in bank.accounts:
