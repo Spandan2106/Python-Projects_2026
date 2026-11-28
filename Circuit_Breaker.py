@@ -42,7 +42,6 @@ class CircuitBreaker:
 
 
 breaker = CircuitBreaker()
-
 while True:
     print("\n1. Simulate Success")
     print("2. Simulate Failure")
