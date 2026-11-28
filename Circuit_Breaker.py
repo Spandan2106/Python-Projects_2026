@@ -24,7 +24,6 @@ class CircuitBreaker:
             self.opened_at = None
         else:
             print("Service call failed!")
-
             self.failure_count += 1
             if (
                 self.failure_count >= self.threshold
