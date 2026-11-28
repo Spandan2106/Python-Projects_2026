@@ -1,16 +1,13 @@
 class BankAccount:
-
     def __init__(self, account_no, name, balance):
         self.account_no = account_no
         self.name = name
         self.balance = balance
         self.history = []
-
     def deposit(self, amount):
         if amount <= 0:
             print("Invalid amount!")
             return
-
         self.balance += amount
         self.history.append("Deposited: " + str(amount))
         print("Deposit successful!")
