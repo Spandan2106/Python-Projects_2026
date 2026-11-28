@@ -72,7 +72,6 @@ while True:
         result = gateway.dispatch(
             key, method, path, data
         )
-
         print(result)
     elif choice == "2":
         break
