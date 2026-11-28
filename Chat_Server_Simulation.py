@@ -11,7 +11,6 @@ class ChatServer:
             return
         self.users[username] = User(username)
         print("User registered!")
-
     def send_message(self, sender, receiver, message):
         if sender not in self.users or receiver not in self.users:
             print("User not found!")
