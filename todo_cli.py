@@ -9,7 +9,6 @@ def load_tasks():
 def save_tasks(tasks):
   with DATA_FILE.open("w", encoding="utf-8") as file:
     json.dump(tasks, file, indent=2)
-
 def show_tasks(tasks):
   if not tasks:
     print("\nNo tasks found.")
