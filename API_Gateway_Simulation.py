@@ -15,7 +15,6 @@ class APIGateway:
         self.api_keys = set()
     def add_api_key(self, key):
         self.api_keys.add(key)
-
     def register_service(self, method, prefix, service):
         self.routes[(method.upper(), prefix)] = service
 
