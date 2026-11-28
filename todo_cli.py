@@ -25,7 +25,6 @@ def add_task(tasks):
   tasks.append({"title": title, "done": False})
   save_tasks(tasks)
   print("Task added.")
-
 def toggle_task(tasks):
   show_tasks(tasks)
   if not tasks:
