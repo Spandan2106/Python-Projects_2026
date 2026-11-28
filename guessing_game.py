@@ -5,7 +5,6 @@ def play_game():
   max_attempts = 7
   print("Welcome to the Number Guessing Game!")
   print(f"Guess a number between 1 and 50. You have {max_attempts} attempts.")
-
   while attempts < max_attempts:
     try:
       guess = int(input("\nEnter your guess: "))
