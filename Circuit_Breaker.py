@@ -24,7 +24,6 @@ class CircuitBreaker:
             self.failure_count = 0
             self.state = self.CLOSED
             self.opened_at = None
-
         else:
             print("Service call failed!")
 
