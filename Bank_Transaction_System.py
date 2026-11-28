@@ -24,7 +24,6 @@ class BankAccount:
         print("Account:", self.account_no)
         print("Name:", self.name)
         print("Balance:", self.balance)
-
     def show_history(self):
         for transaction in self.history:
             print(transaction)
