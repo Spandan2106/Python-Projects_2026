@@ -44,7 +44,6 @@ gateway.register_service(
 while True:
     print("\n1. Send API Request")
     print("2. Exit")
-
     choice = input("Choice: ")
 
     if choice == "1":
