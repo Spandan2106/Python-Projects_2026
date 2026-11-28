@@ -50,7 +50,6 @@ while True:
         method = input("Method: ")
         path = input("Path: ")
         data = input("Payload: ")
-
         result = gateway.dispatch(
             key, method, path, data
         )
