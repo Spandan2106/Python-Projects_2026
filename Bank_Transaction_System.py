@@ -97,7 +97,6 @@ while True:
         receiver = input("Receiver account: ")
         amount = float(input("Amount: "))
         bank.transfer(sender, receiver, amount)
-
     elif choice == "5":
         acc = input("Account number: ")
         if acc in bank.accounts:
