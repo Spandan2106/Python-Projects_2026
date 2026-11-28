@@ -17,7 +17,6 @@ def show_tasks(tasks):
   for index, task in enumerate(tasks, start=1):
     status = "x" if task["done"] else " "
     print(f"{index}. [{status}] {task['title']}")
-
 def add_task(tasks):
   title = input("Enter task title: ").strip()
   if not title:
