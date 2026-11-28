@@ -25,7 +25,6 @@ class ConnectionPool:
                 return connection
         print("Connection pool exhausted!")
         return None
-
     def release(self, connection):
         if connection not in self.connections:
             print("Invalid connection!")
