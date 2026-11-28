@@ -35,7 +35,6 @@ class APIGateway:
         }
 gateway = APIGateway()
 gateway.add_api_key("demo-key")
-
 gateway.register_service(
     "GET", "/users", Service("UserService")
 )
