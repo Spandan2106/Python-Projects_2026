@@ -23,7 +23,6 @@ class APIGateway:
                 "status": 401,
                 "error": "Unauthorized"
             }
-
         for (registered_method, prefix), service in self.routes.items():
 
             if (
