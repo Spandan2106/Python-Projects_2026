@@ -27,7 +27,6 @@ def play_game():
       remaining = max_attempts - attempts
       if remaining > 0:
         print(f"Attempts left: {remaining}")
-
     except ValueError:
       print("Please enter a valid whole number.")
   print(f"\nGame over! The secret number was {secret_number}.")
