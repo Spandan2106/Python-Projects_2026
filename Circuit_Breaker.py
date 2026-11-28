@@ -9,7 +9,6 @@ class CircuitBreaker:
         self.failure_count = 0
         self.state = self.CLOSED
         self.opened_at = None
-
     def call(self, success):
 
         if self.state == self.OPEN:
