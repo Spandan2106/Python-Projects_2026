@@ -18,7 +18,6 @@ def show_tasks(tasks):
     status = "x" if task["done"] else " "
     print(f"{index}. [{status}] {task['title']}")
 
-
 def add_task(tasks):
   title = input("Enter task title: ").strip()
   if not title:
