@@ -21,7 +21,6 @@ class ChatServer:
             "message": message
         })
         print("Message sent!")
-
     def receive_messages(self, username):
         if username not in self.users:
             print("User not found!")
