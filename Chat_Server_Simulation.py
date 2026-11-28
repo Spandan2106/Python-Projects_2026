@@ -41,7 +41,6 @@ while True:
     print("3. Receive Messages")
     print("4. Exit")
     choice = input("Enter choice: ")
-
     if choice == "1":
         server.register_user(input("Username: "))
     elif choice == "2":
