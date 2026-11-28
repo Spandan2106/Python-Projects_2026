@@ -100,7 +100,6 @@ while True:
 
     elif choice == "5":
         acc = input("Account number: ")
-
         if acc in bank.accounts:
             bank.accounts[acc].display()
         else:
