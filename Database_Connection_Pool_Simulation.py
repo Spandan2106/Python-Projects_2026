@@ -4,7 +4,6 @@ class FakeConnection:
         self.in_use = False
     def execute(self, query):
         print("Executing:", query)
-
 class ConnectionPool:
     def __init__(self, size):
         self.connections = [
