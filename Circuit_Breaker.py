@@ -12,7 +12,6 @@ class CircuitBreaker:
     def call(self, success):
 
         if self.state == self.OPEN:
-
             if time.time() - self.opened_at >= self.timeout:
                 self.state = self.HALF_OPEN
                 print("Circuit is HALF_OPEN!")
