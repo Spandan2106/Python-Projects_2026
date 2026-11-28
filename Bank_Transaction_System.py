@@ -58,7 +58,6 @@ class Bank:
         else:
             print("Insufficient balance!")
 bank = Bank()
-
 while True:
     print("\n1. Create Account")
     print("2. Deposit")
