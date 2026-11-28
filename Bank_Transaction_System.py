@@ -77,7 +77,6 @@ while True:
         name = input("Name: ")
         amount = float(input("Initial balance: "))
         bank.create_account(acc, name, amount)
-
     elif choice in ["2", "3"]:
         acc = input("Account number: ")
         if acc not in bank.accounts:
