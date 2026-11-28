@@ -33,7 +33,6 @@ class CircuitBreaker:
             ):
                 self.state = self.OPEN
                 self.opened_at = time.time()
-
                 print("Circuit OPENED!")
     def status(self):
         print("Current State:", self.state)
