@@ -80,7 +80,6 @@ while True:
 
     elif choice in ["2", "3"]:
         acc = input("Account number: ")
-
         if acc not in bank.accounts:
             print("Account not found!")
             continue
