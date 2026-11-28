@@ -49,7 +49,6 @@ class Bank:
             return
         a = self.accounts[sender]
         b = self.accounts[receiver]
-
         if a.balance >= amount:
             a.balance -= amount
             b.balance += amount
