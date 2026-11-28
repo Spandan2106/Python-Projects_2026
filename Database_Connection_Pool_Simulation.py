@@ -55,7 +55,6 @@ while True:
     print("4. Show Pool")
     print("5. Exit")
     choice = input("Choice: ")
-
     if choice == "1":
         connection = pool.acquire()
         if connection:
