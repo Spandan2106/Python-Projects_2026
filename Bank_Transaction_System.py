@@ -20,7 +20,6 @@ class BankAccount:
             self.balance -= amount
             self.history.append("Withdrawn: " + str(amount))
             print("Withdrawal successful!")
-
     def display(self):
         print("Account:", self.account_no)
         print("Name:", self.name)
