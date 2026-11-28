@@ -13,7 +13,6 @@ class ConnectionPool:
             FakeConnection(i + 1)
             for i in range(size)
         ]
-
     def acquire(self):
         for connection in self.connections:
             if not connection.in_use:
