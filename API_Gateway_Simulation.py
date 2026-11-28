@@ -74,6 +74,5 @@ while True:
         )
 
         print(result)
-
     elif choice == "2":
         break
