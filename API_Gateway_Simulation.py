@@ -29,7 +29,6 @@ class APIGateway:
                 and path.startswith(prefix)
             ):
                 return service.handle(method, path, data)
-
         return {
             "status": 404,
             "error": "Route not found"
