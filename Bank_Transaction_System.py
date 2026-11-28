@@ -27,7 +27,6 @@ class BankAccount:
     def show_history(self):
         for transaction in self.history:
             print(transaction)
-
 class Bank:
 
     def __init__(self):
