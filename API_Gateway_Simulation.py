@@ -41,7 +41,6 @@ gateway.register_service(
 gateway.register_service(
     "POST", "/orders", Service("OrderService")
 )
-
 while True:
     print("\n1. Send API Request")
     print("2. Exit")
