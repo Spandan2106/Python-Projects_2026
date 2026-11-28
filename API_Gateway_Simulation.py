@@ -13,7 +13,6 @@ class APIGateway:
     def __init__(self):
         self.routes = {}
         self.api_keys = set()
-
     def add_api_key(self, key):
         self.api_keys.add(key)
 
