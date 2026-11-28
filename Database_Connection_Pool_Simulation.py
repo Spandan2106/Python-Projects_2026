@@ -7,7 +7,6 @@ class FakeConnection:
 
 
 class ConnectionPool:
-
     def __init__(self, size):
         self.connections = [
             FakeConnection(i + 1)
