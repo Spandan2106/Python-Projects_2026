@@ -34,7 +34,6 @@ class APIGateway:
             "error": "Route not found"
         }
 
-
 gateway = APIGateway()
 
 gateway.add_api_key("demo-key")
