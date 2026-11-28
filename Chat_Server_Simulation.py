@@ -32,7 +32,6 @@ class ChatServer:
             print(msg["sender"], ":", msg["message"])
         inbox.clear()
 
-
 server = ChatServer()
 while True:
     print("\n1. Register User")
