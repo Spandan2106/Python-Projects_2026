@@ -47,7 +47,6 @@ class Bank:
         if amount <= 0:
             print("Invalid amount!")
             return
-
         a = self.accounts[sender]
         b = self.accounts[receiver]
 
