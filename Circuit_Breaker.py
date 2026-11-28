@@ -17,7 +17,6 @@ class CircuitBreaker:
             else:
                 print("Request rejected!")
                 return
-
         if success:
             print("Service call successful!")
 
