@@ -40,7 +40,6 @@ def toggle_task(tasks):
   except ValueError:
     print("Please enter a valid number.")
 
-
 def delete_task(tasks):
   show_tasks(tasks)
   if not tasks:
