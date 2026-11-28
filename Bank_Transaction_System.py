@@ -108,7 +108,6 @@ while True:
 
     elif choice == "6":
         acc = input("Account number: ")
-
         if acc in bank.accounts:
             bank.accounts[acc].show_history()
         else:
