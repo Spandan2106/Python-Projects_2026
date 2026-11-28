@@ -57,7 +57,6 @@ class Bank:
             print("Transfer successful!")
         else:
             print("Insufficient balance!")
-
 bank = Bank()
 
 while True:
