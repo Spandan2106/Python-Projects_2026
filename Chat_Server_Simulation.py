@@ -3,7 +3,6 @@ class User:
         self.username = username
         self.inbox = []
 
-
 class ChatServer:
 
     def __init__(self):
