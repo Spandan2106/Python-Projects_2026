@@ -45,7 +45,6 @@ while True:
     print("\n1. Send API Request")
     print("2. Exit")
     choice = input("Choice: ")
-
     if choice == "1":
 
         key = input("API Key: ")
